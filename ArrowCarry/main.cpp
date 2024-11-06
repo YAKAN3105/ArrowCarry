@@ -1,9 +1,11 @@
 #include "DxLib.h"
 #include "game.h"
+#include "Player.h"
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
+	Player player;
 	// 一部のDxLib関数はDxLib_Init()の前に呼ぶ必要がある
 
 	// フルスクリーンではなく、ウィンドウモードで開く
@@ -29,7 +31,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		ClearDrawScreen();
 
 		// ここにゲームの処理を書く
-
+		
 
 		// 画面の切り替わりを待つ必要がある
 		ScreenFlip();

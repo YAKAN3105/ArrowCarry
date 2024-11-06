@@ -3,8 +3,8 @@
 
 namespace
 {
-	constexpr float kWidth;
-	constexpr float k;
+	constexpr float kWidth =0;
+	constexpr float kHeight = 0;
 }
 
 Arrow::Arrow()
@@ -25,5 +25,5 @@ void Arrow::Update()
 
 void Arrow::Draw()
 {
-	Draw
+	
 }
