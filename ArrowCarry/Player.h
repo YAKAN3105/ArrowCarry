@@ -8,5 +8,16 @@ public:
 	void Init();
 	void Update();
 	void Draw();
+
+	struct Position
+	{
+		int x;
+		int y;
+	};
+
+private:
+	Position pos;
+	int radius;
+
 };
 
