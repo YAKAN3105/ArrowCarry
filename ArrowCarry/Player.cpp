@@ -4,13 +4,13 @@
 namespace
 {
 	unsigned int Color;
-	constexpr float kCircleX = 320;
-	constexpr float kCircleY = 240;
-	constexpr float kCircleR = 100;
+
+	constexpr float kPlayerRadius = 30;
 }
 
 Player::Player()
 {
+	radius = kPlayerRadius;
 }
 
 Player::~Player()
@@ -23,10 +23,13 @@ void Player::Init()
 
 void Player::Update()
 {
+	pos.x = 50;
+	pos.y = 50;
+	radius++;
 }
 
 void Player::Draw()
 {
 	Color = GetColor(0, 0, 255);
-	DrawCircle(kCircleX, kCircleY, kCircleR, Color, TRUE);
+	DrawCircle(pos.x, pos.y, radius, Color, TRUE);
 }
