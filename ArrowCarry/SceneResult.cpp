@@ -16,7 +16,7 @@ void SceneResult::Init()
 
 void SceneResult::Update()
 {
-	if (CheckHitKey(KEY_INPUT_RETURN))
+	if (CheckHitKey(KEY_INPUT_RETURN))// Enterキーを押すと
 	{
 		ChangeScene(new SceneTitle); // タイトルシーンに引っ越しするよ
 		return;
