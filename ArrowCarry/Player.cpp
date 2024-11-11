@@ -23,7 +23,7 @@ void Player::Init()
 
 void Player::Update()
 {
-	pos.x = 50;
+	pos.x++;
 	pos.y = 50;
 	radius++;
 }
