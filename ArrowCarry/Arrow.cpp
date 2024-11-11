@@ -27,3 +27,23 @@ void Arrow::Draw()
 {
 	
 }
+
+float Arrow::GetLeft()
+{
+	return 0.0f;
+}
+
+float Arrow::GetTop()
+{
+	return 0.0f;
+}
+
+float Arrow::GetRight()
+{
+	return 0.0f;
+}
+
+float Arrow::GetBottom()
+{
+	return 0.0f;
+}
