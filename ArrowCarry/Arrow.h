@@ -15,5 +15,17 @@ public:
 	float GetRight();
 	float GetBottom();
 
+	struct Posision
+	{
+		int x;
+		int x1;
+		int y;
+		int y1;
+	};
+
+private:
+	Posision pos;
+	int radius;
+
 };
 
