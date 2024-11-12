@@ -40,7 +40,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	
 	Map* map = new Map;
 	map->Init();
-
+	// *でポインタを指定する
 	SceneBase* scene;
 
 	scene = new SceneTitle; // 最初に住んでいるところ

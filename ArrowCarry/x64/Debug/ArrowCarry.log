@@ -1,3 +1,4 @@
-﻿  main.cpp
+﻿  Map.cpp
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  LINK : 前回のインクリメンタル リンクで C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\x64\Debug\ArrowCarry.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
   ArrowCarry.vcxproj -> C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\x64\Debug\ArrowCarry.exe

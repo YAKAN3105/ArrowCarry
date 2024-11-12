@@ -12,7 +12,7 @@ public:
 
 private:
 	// グラフィックのハンドル
-	int m_handlel;
+	int m_handle;
 
 	// グラフィックにチップがいくつ含まれているか
 	int m_graphChipNumX;
