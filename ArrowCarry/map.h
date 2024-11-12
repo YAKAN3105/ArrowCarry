@@ -1,13 +1,21 @@
 #pragma once
-class map
+class Map
 {
 public:
-	map();
-	~map();
+	Map();
+	~Map();
 
 	void Init();
 	void End();
 	void Update();
 	void Draw();
+
+private:
+	// グラフィックのハンドル
+	int m_handlel;
+
+	// グラフィックにチップがいくつ含まれているか
+	int m_graphChipNumX;
+	int m_graphChipNumY;
 };
 

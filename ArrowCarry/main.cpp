@@ -5,6 +5,7 @@
 #include "SceneTitle.h"
 #include "SceneGame.h"
 #include "SceneResult.h"
+#include "map.h"
 
 
 // ƒvƒƒOƒ‰ƒ€‚Í WinMain ‚©‚çŽn‚Ü‚è‚Ü‚·
@@ -31,11 +32,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	SetDrawScreen(DX_SCREEN_BACK);
 
 	// ‰Šú‰»
-	Player player;
-	player.Init();
+	Player* player = new Player;
+	player->Init();
 
-	Arrow arrow;
-	arrow.Init();
+	Arrow* arrow = new Arrow;
+	arrow->Init();
+	
+	Map* map = new Map;
+	map->Init();
 
 	SceneBase* scene;
 
@@ -60,13 +64,16 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		ClearDrawScreen();
 
 		// ‚±‚±‚ÉƒQ[ƒ€‚Ìˆ—‚ð‘‚­
-		player.Update();
-		arrow.Update();
+		player->Update();
+		arrow->Update();
 		scene->Update(); // ˆø‚Á‰z‚µæ‚ðŒˆ‚ß‚é
+		map->Update();
 
-		player.Draw();
-		arrow.Draw();
+		map->Draw();
+		arrow->Draw();
+		player->Draw();
 		scene->Draw();
+		
 
 		if (scene != scene->m_next)
 		{
