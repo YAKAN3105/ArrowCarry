@@ -1,27 +1,37 @@
 #include "map.h"
 #include <DxLib.h>
+#include "game.h"
 
-map::map()
+#include <cassert>
+
+// 定数の定義
+namespace
+{
+	// マップチップ1つ
+}
+
+Map::Map()
 {
 }
 
-map::~map()
+Map::~Map()
 {
 }
 
-void map::Init()
+void Map::Init()
 {
 }
 
-void map::End()
+void Map::End()
 {
 }
 
-void map::Update()
+void Map::Update()
 {
 }
 
-void map::Draw()
+void Map::Draw()
 {
-
+	// 画面全体を紫で塗りつぶす
+	DrawBox(0, 0, Game::kScreenWidth, Game::kScreenHeight, GetColor(206, 128, 255), true);
 }
