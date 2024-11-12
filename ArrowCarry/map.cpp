@@ -34,6 +34,8 @@ namespace
 
 }
 
+// コンストラクタでメンバ変数の初期化を行う
+// コンストラクタ初期化子を使用して初期化する
 Map::Map():
 	m_handle(-1),
 	m_graphChipNumX(0),
@@ -49,7 +51,10 @@ void Map::Init()
 {
 	// グラフィックの読み込みをする
 	m_handle = LoadGraph("data/image1/Sprites/Tiles/Terrain.png");// 素材を持ってくる
-	assert(m_handle != -1);	
+	assert(m_handle != -1);	 // 読み込んでるかのチェックをする
+
+	// 読み込んだグラフィックにチップが何個あるかを教えておく
+	int graph;
 }
 
 void Map::End()
@@ -64,6 +69,7 @@ void Map::Update()
 
 void Map::Draw()
 {
+
 	// 画面全体を紫で塗りつぶす
 	DrawBox(0, 0, Game::kScreenWidth, Game::kScreenHeight, GetColor(206, 128, 255), true);
 }
