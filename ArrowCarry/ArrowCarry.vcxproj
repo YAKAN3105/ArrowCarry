@@ -151,7 +151,7 @@
   <ItemGroup>
     <ClInclude Include="Arrow.h" />
     <ClInclude Include="game.h" />
-    <ClInclude Include="map.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="MyKeyInput.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="SceneBase.h" />

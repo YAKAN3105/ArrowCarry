@@ -1,4 +1,12 @@
 #pragma once
+#include <iostream>
+#include <fstream>
+
+namespace
+{
+	//const char* const FILE_NAME = "data/MapChip1.fmf";
+}
+
 class Map
 {
 public:
@@ -17,5 +25,7 @@ private:
 	// グラフィックにチップがいくつ含まれているか
 	int m_graphChipNumX;
 	int m_graphChipNumY;
+
+	
 };
 
