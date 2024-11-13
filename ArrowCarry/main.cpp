@@ -1,11 +1,9 @@
 #include "DxLib.h"
 #include "game.h"
-#include "Player.h"
-#include "Arrow.h"
 #include "SceneTitle.h"
 #include "SceneGame.h"
 #include "SceneResult.h"
-#include "map.h"
+
 
 
 // プログラムは WinMain から始まります
@@ -19,8 +17,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	SetGraphMode(Game::kScreenWidth, Game::kScreenHeight, Game::kColorBitNum);
 
 	SetWindowText("あいうえお");
-
-	
 	
 
 	if (DxLib_Init() == -1)		// ＤＸライブラリ初期化処理
@@ -31,15 +27,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	// 描画先を裏画面にする
 	SetDrawScreen(DX_SCREEN_BACK);
 
-	// 初期化
-	Player* player = new Player;
-	player->Init();
-
-	Arrow* arrow = new Arrow;
-	arrow->Init();
-	
-	Map* map = new Map;
-	map->Init();
 	// *でポインタを指定する
 	SceneBase* scene;
 
@@ -48,10 +35,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	//scene = new SceneGame;
 
 	//scene = new SceneResult;
-
-	
-
-	
 
 	// ゲームループ
 	while (ProcessMessage() == 0) // Windowsが行う処理を待つ
@@ -64,14 +47,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		ClearDrawScreen();
 
 		// ここにゲームの処理を書く
-		player->Update();
-		arrow->Update();
+		
+		
 		scene->Update(); // 引っ越し先を決める
-		map->Update();
-
-		map->Draw();
-		arrow->Draw();
-		player->Draw();
+		
 		scene->Draw();
 		
 
