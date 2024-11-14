@@ -13,7 +13,11 @@ public:
 	/// ˆø‚Á‰z‚µ‚·‚é
 	/// </summary>
 	/// <param name="next">ˆø‚Á‰z‚µæ‚ÌZŠ</param>
-	void ChangeScene(SceneBase* next) { m_next = next; }
+	void ChangeScene(SceneBase* next) 
+	{
+		m_next = next;
+		m_next->Init();
+	}
 
 	SceneBase* m_next;	// Å‰A©•ª‚Ì‰Æ‚ÌZŠ
 };

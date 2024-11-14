@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <fstream>
+#include<vector>
 
 namespace
 {
@@ -26,6 +27,9 @@ private:
 	int m_graphChipNumX;
 	int m_graphChipNumY;
 
+	std::vector<char>m_data;
+
+	int m_filesize; // 外部ファイルの大きさを保存するための変数
 	
 };
 

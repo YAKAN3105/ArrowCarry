@@ -4,10 +4,7 @@
 #include "SceneGame.h"
 #include "SceneResult.h"
 
-namespace
-{
-	const char*
-}
+
 
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
@@ -33,10 +30,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	// *でポインタを指定する
 	SceneBase* scene;
 
+	scene = new SceneTitle; // 最初に住んでいるところ
+
 	scene->Init();
 	
 
-	scene = new SceneTitle; // 最初に住んでいるところ
+	
 
 	//scene = new SceneGame;
 
@@ -68,7 +67,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			scene = nullptr; // 何も住む場所がない状態
 
 			scene = next; // 次のシーンに引っ越しする
-			
 		}
 
 
