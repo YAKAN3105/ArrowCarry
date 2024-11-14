@@ -1,8 +1,2 @@
-﻿  Player.cpp
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(8,32): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(36,10): warning C4244: '+=': 'float' から 'int' への変換です。データが失われる可能性があります。
-  main.cpp
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  コードを生成中...
+﻿  LINK : 前回のインクリメンタル リンクで C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\x64\Debug\ArrowCarry.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
   ArrowCarry.vcxproj -> C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\x64\Debug\ArrowCarry.exe
