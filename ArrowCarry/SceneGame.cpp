@@ -24,7 +24,7 @@ void SceneGame::Update()
 
 	if (CheckHitKey(KEY_INPUT_RETURN)) // EnterƒL[‚ğ‰Ÿ‚·‚Æ
 	{
-		ChangeScene(new SceneResult); // ResultScene‚Éˆø‚Á‰z‚µ
+		//ChangeScene(new SceneResult); // ResultScene‚Éˆø‚Á‰z‚µ
 		return;
 	}
 }
