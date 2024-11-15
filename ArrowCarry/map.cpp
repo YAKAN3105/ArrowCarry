@@ -106,7 +106,7 @@ void Map::Init()
 	//なぜか最初の20バイトが無駄なデータになっている(ごみ)
 	for (int i = 0; i < 20; i++)
 	{
-		char tmp;
+	 unsigned int tmp;
 		//1バイトずつ読み込む(計20バイト読み込む)
 		ifs.read(&tmp, sizeof(char));
 	}
@@ -116,7 +116,7 @@ void Map::Init()
 
 	while (true)
 	{
-		char tmp;
+		unsigned int tmp;
 		ifs.read(&tmp, sizeof(char));
 
 		data.push_back(tmp);
