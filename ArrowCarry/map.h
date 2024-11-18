@@ -27,7 +27,7 @@ private:
 	int m_graphChipNumX;
 	int m_graphChipNumY;
 
-	std::vector<char>m_data;
+	std::vector<unsigned __int8>m_data;
 
 	int m_filesize; // 外部ファイルの大きさを保存するための変数
 	

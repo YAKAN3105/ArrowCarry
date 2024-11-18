@@ -15,8 +15,11 @@ namespace
 	constexpr int kChipWidth = 32;
 	constexpr int kChipHeight = 32;
 
-	constexpr int kChipNumX = 32;
-	constexpr int kChipNumY = 32;
+	constexpr int kChipNumX = 16;
+	constexpr int kChipNumY = 16;
+
+	constexpr int kChipIndexX = 16;
+	constexpr int kChipIndexY = 16;
 
 	// マップに敷き詰めるチップの数
 	//constexpr int kChipNumX = Game::kScreenWidth / kChipWidth;
@@ -41,9 +44,9 @@ Map::~Map()
 
 void Map::Init()
 {
-	//// グラフィックの読み込みをする
-	//m_handle = LoadGraph("data/image1/Sprites/Tiles/Terrain.png");// 素材を持ってくる
-	//assert(m_handle != -1);	 // 読み込んでるかのチェックをする
+	// グラフィックの読み込みをする
+	m_handle = LoadGraph("data/image1/Sprites/Tiles/aaa.jpg");// 素材を持ってくる
+	assert(m_handle != -1);	 // 読み込んでるかのチェックをする
 
 	//// 読み込んだグラフィックにチップが何個あるかを教えておく
 	//int graph;
@@ -106,7 +109,7 @@ void Map::Init()
 	//なぜか最初の20バイトが無駄なデータになっている(ごみ)
 	for (int i = 0; i < 20; i++)
 	{
-	 unsigned int tmp;
+	     char tmp;
 		//1バイトずつ読み込む(計20バイト読み込む)
 		ifs.read(&tmp, sizeof(char));
 	}
@@ -116,10 +119,10 @@ void Map::Init()
 
 	while (true)
 	{
-		unsigned int tmp;
+		char tmp;
 		ifs.read(&tmp, sizeof(char));
 
-		data.push_back(tmp);
+		m_data.push_back(tmp);
 
 		size--;
 
@@ -151,12 +154,14 @@ void Map::Draw()
 	// 画面全体を紫で塗りつぶす
 	DrawBox(0, 0, Game::kScreenWidth, Game::kScreenHeight, GetColor(206, 128, 255), true);
 
-	for (int y = 0; y < kChipNumY; y++)
+	for (int y = 0; y < 32; y++)
 	{
-		for (int x = 0; x < kChipNumX; x++)
+		for (int x = 0; x < 32; x++)
 		{
 			// データから配置するチップを決定する
-			int chipNo = m_data[(y * kChipNumX) + x];
+			// 二重配列の場合でも、vector配列を先頭から順番に見ていくための処理
+			int chipNo = m_data[(y * 32) + x];
+			
 
 
 			if (chipNo < 0)
@@ -177,6 +182,8 @@ void Map::Draw()
 			// チップ番号から切り出し位置を計算する
 			int cutX = indexX * kChipWidth; // インデックスX番号を用いたマップチップの位置を示す変数
 			int cutY = indexY * kChipHeight;// インデックスY番号を用いたマップチップの位置を示す変数
+
+			int a = -500;
 
 			DrawRectGraph
 			(x * kChipWidth,				// グラフィックを描画する座標
