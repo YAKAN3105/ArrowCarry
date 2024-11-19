@@ -1,6 +1,7 @@
 #include "Arrow.h"
 #include<DxLib.h>
 #include "game.h"
+#include "Player.h"
 
 namespace
 {
@@ -10,8 +11,10 @@ namespace
 	unsigned int Color;
 }
 
-Arrow::Arrow()
+Arrow::Arrow(Player* playerPointer):
+	pPlayer(playerPointer)
 {
+
 }
 
 Arrow::~Arrow()
@@ -26,10 +29,10 @@ void Arrow::Update()
 {
 	//pos.x = Game::kScreenWidth;
 	//pos.y = Game::kScreenHeight;
-	pos.x = 200;
-	pos.y = 200;
-	pos.x1 = 50;
-	pos.y1 = 50;
+	m_pos.Top = 600;
+	m_pos.Bottom = 680;
+	m_pos.Left = 600;
+	m_pos.Right = 680;
 }
 
 void Arrow::Draw()
@@ -49,7 +52,9 @@ void Arrow::Draw()
 	// 
 //	Color = GetColor(255, 0, 0);
 	Color = 0xff0000;
-	DrawBox(600,600,680,680,Color, TRUE);
+	DrawBox(m_pos.Left,m_pos.Top,m_pos.Right,m_pos.Bottom,Color, TRUE);
+
+	DrawFormatString(0,0,0xffffff,"PlayerPos:%f,%f", pPlayer->GetLeft(), pPlayer->GetTop());
 }
 
 float Arrow::GetLeft()
@@ -70,4 +75,14 @@ float Arrow::GetRight()
 float Arrow::GetBottom()
 {
 	return 0.0f;
+}
+
+void Arrow::OnPlayerHit()
+{
+	
+	if (m_pos.Left >= pPlayer->GetRight() &&
+		m_pos.Right >=pPlayer->GetLeft());
+	{
+
+	}
 }

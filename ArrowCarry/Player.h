@@ -32,7 +32,7 @@ private:
 	int m_animFrame; // フレーム数を数える
 	// 現在再生中のアニメーション
 	// true:走っている false:待機
-	bool  m_isRun;	// 変数
+	bool m_isRun;	// 変数
 
 	// playerが左を向いているかどうか
 	// true:左向き　false:右向き

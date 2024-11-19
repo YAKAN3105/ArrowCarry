@@ -3,7 +3,7 @@ class SceneBase
 {
 public:
 	SceneBase() { m_next = this; }	//this自身のポインタ
-	~SceneBase() {};
+	virtual ~SceneBase() {};
 
 	virtual void Init() abstract;
 	virtual void Update() abstract;

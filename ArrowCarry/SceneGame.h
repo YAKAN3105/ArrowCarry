@@ -6,8 +6,8 @@
 class SceneGame : public SceneBase
 {
 public:
-	SceneGame() {};
-	~SceneGame() {};
+	SceneGame();
+	virtual ~SceneGame();
 
 	virtual void Init() override;
 	virtual void Update() override;
@@ -15,7 +15,7 @@ public:
 
 private:
 	// ‰Šú‰»
-	Player* player = new Player;
-	Arrow* arrow = new Arrow;
-	Map* map = new Map;
+	Player* player;
+	Arrow* arrow;
+	Map* map;
 };

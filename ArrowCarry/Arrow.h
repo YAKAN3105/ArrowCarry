@@ -1,8 +1,11 @@
 #pragma once
+
+class Player;
+
 class Arrow
 {
 public:
-	Arrow();
+	Arrow(Player* playerPointer);
 	~Arrow();
 
 	void Init();
@@ -15,16 +18,19 @@ public:
 	float GetRight();
 	float GetBottom();
 
-	struct Posision
+	struct Position
 	{
-		int x;
-		int x1;
-		int y;
-		int y1;
+		int Top;
+		int Bottom;
+		int Left;
+		int Right;
 	};
 
 private:
-	Posision pos;
+
+	void OnPlayerHit();
+	Player* pPlayer;
+	Position m_pos;
 	int radius;
 
 };

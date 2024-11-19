@@ -8,6 +8,17 @@ namespace
 	
 }
 
+SceneGame::SceneGame()
+{
+	player= new Player;
+	arrow = new Arrow(player);
+	map = new Map;
+}
+
+SceneGame::~SceneGame()
+{
+}
+
 void SceneGame::Init()
 {
 	player->Init();
