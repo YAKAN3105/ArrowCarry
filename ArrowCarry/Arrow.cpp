@@ -26,10 +26,10 @@ void Arrow::Update()
 {
 	//pos.x = Game::kScreenWidth;
 	//pos.y = Game::kScreenHeight;
-	pos.x = 500;
-	pos.y = 500;
-	pos.x1 = 100;
-	pos.y1 = 100;
+	pos.x = 200;
+	pos.y = 200;
+	pos.x1 = 50;
+	pos.y1 = 50;
 }
 
 void Arrow::Draw()

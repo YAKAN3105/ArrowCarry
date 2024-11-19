@@ -183,7 +183,7 @@ void Map::Draw()
 			int cutX = indexX * kChipWidth; // インデックスX番号を用いたマップチップの位置を示す変数
 			int cutY = indexY * kChipHeight;// インデックスY番号を用いたマップチップの位置を示す変数
 
-			int a = -500;
+			int a = -200;
 
 			DrawRectGraph
 			(x * kChipWidth,				// グラフィックを描画する座標
