@@ -15,11 +15,11 @@ namespace
 	constexpr int kChipWidth = 32;
 	constexpr int kChipHeight = 32;
 
-	constexpr int kChipNumX = 16;
-	constexpr int kChipNumY = 16;
+	constexpr int kPartsNumX = 16; // 
+	constexpr int kPartsNumY = 16;
 
-	constexpr int kChipIndexX = 16;
-	constexpr int kChipIndexY = 16;
+	constexpr int kChipIndexX = 40;	// 
+	constexpr int kChipIndexY = 32;
 
 	// マップに敷き詰めるチップの数
 	//constexpr int kChipNumX = Game::kScreenWidth / kChipWidth;
@@ -154,15 +154,13 @@ void Map::Draw()
 	// 画面全体を紫で塗りつぶす
 	DrawBox(0, 0, Game::kScreenWidth, Game::kScreenHeight, GetColor(206, 128, 255), true);
 
-	for (int y = 0; y < 32; y++)
+	for (int y = 0; y < kChipIndexY; y++)
 	{
-		for (int x = 0; x < 32; x++)
+		for (int x = 0; x < kChipIndexX; x++)
 		{
 			// データから配置するチップを決定する
 			// 二重配列の場合でも、vector配列を先頭から順番に見ていくための処理
-			int chipNo = m_data[(y * 32) + x];
-			
-
+			int chipNo = m_data[(y * kChipIndexY) + x];
 
 			if (chipNo < 0)
 			{
@@ -175,19 +173,22 @@ void Map::Draw()
 			// 上から何個目、左から何個目なのか、という情報に変換する必要がある
 			// グラフィックに何個チップが含まれているか、という情報を使用して
 			// 計算で求める
-			int indexX = chipNo % kChipNumX; // 左から何個目のチップか
-			int indexY = chipNo / kChipNumY; // 上から何個目のチップか
+			int indexX = chipNo % kPartsNumX; // 左から何個目のチップか
+			int indexY = chipNo / kPartsNumY; // 上から何個目のチップか
 
 
 			// チップ番号から切り出し位置を計算する
 			int cutX = indexX * kChipWidth; // インデックスX番号を用いたマップチップの位置を示す変数
-			int cutY = indexY * kChipHeight;// インデックスY番号を用いたマップチップの位置を示す変数
+			int cutY = indexY * kChipHeight; // インデックスY番号を用いたマップチップの位置を示す変数
 
 			int a = -200;
 
+			int xnum = kChipHeight * kChipIndexY - Game::kScreenHeight;
+
+
 			DrawRectGraph
 			(x * kChipWidth,				// グラフィックを描画する座標
-				y * kChipHeight,
+				y * kChipHeight -xnum,
 				cutX, cutY,					// 描画するグラフィック上の描画したい矩形の左上座標
 				kChipWidth, kChipHeight,	// 描画するグラフィックのサイズ
 				m_handle, true);			// 

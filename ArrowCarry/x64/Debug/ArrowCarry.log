@@ -1,2 +1,3 @@
-﻿  Arrow.cpp
+﻿  Map.cpp
+C:\Users\杉野雄清\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(102,11): warning C4244: '初期化中': 'std::streamoff' から 'int' への変換です。データが失われる可能性があります。
   ArrowCarry.vcxproj -> C:\Users\杉野雄清\Documents\GitHub\ArrowCarry\ArrowCarry\x64\Debug\ArrowCarry.exe
