@@ -33,5 +33,7 @@ private:
 	Position m_pos;
 	int radius;
 
+	enum 
+
 };
 

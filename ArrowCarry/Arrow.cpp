@@ -81,8 +81,8 @@ void Arrow::OnPlayerHit()
 {
 	
 	if (m_pos.Left >= pPlayer->GetRight() &&
-		m_pos.Right >=pPlayer->GetLeft());
+		m_pos.Right >=pPlayer->GetLeft())
 	{
-
+		
 	}
 }
