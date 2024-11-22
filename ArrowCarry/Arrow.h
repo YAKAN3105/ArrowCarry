@@ -31,7 +31,11 @@ private:
 	void OnPlayerHit();
 	Player* pPlayer;
 	Position m_pos;
-	int radius;
+	int m_radius;
+
+	int m_handleUpArrow;
+	int m_handleLeftArrow;
+	int m_handleRightArrow;
 
 
 };

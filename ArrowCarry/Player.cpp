@@ -18,8 +18,8 @@ namespace
 	// アニメーション1コマのフレーム数
 	constexpr int kSingleAnimFrame = 4;
 
-	constexpr float PlayerPosX = 100;
-	constexpr float PlayerPosY = 600;
+	constexpr float kPlayerPosX = 100;
+	constexpr float kPlayerPosY = 672;
 }
 
 Player::Player() :
@@ -31,6 +31,7 @@ Player::Player() :
 {
 	radius = kPlayerRadius;
 	speed = 2;
+	m_PlayerNowPos = kPlayerPosX;
 }
 
 Player::~Player()
@@ -45,8 +46,8 @@ void Player::Init()
 	m_handleRun = LoadGraph("data/image1/Sprites/King/Run.png");
 	assert(m_handleRun != -1);
 
-	m_pos.x = PlayerPosX;
-	m_pos.y = PlayerPosY;
+	m_pos.x = kPlayerPosX;
+	m_pos.y = kPlayerPosY;
 }
 
 void Player::End()
@@ -57,8 +58,18 @@ void Player::End()
 }
 
 void Player::Update()
-{
-	m_pos.x+= speed;
+{ 
+
+	if (CheckHitKey(KEY_INPUT_SPACE))
+	{
+		m_isRun = true;
+		
+	}
+	else if (CheckHitKey(KEY_INPUT_0))
+	{
+		m_isRun = false;
+		m_pos.x = m_PlayerNowPos;
+	}
 
 	// アニメーションの更新
 	m_animFrame++;
@@ -80,7 +91,15 @@ void Player::Update()
 	// 前回のアニメーションの状態を覚えておく
 	//bool isLastRun = m_isRun;
 
-	m_isRun = true;
+	if (m_isRun)
+	{
+		m_pos.x += speed;
+	}
+	else if (m_isRun = false)
+	{
+
+	}
+
 
 	////処理を行った結果、アニメーションが変わっていた場合の処理
 	//if (m_isRun != isLastRun)

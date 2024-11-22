@@ -23,6 +23,7 @@ Arrow::~Arrow()
 
 void Arrow::Init()
 {
+
 }
 
 void Arrow::Update()
@@ -50,7 +51,7 @@ void Arrow::Draw()
 	// 
 	// 0b0101 0101  0101 0101  0101 0101
 	// 
-//	Color = GetColor(255, 0, 0);
+	//	Color = GetColor(255, 0, 0);
 	Color = 0xff0000;
 	DrawBox(m_pos.Left,m_pos.Top,m_pos.Right,m_pos.Bottom,Color, TRUE);
 
@@ -83,6 +84,6 @@ void Arrow::OnPlayerHit()
 	if (m_pos.Left >= pPlayer->GetRight() &&
 		m_pos.Right >=pPlayer->GetLeft())
 	{
-		
+		printfDx("ìñÇΩÇ¡ÇΩÅI");
 	}
 }

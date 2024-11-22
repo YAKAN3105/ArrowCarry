@@ -160,7 +160,7 @@ void Map::Draw()
 		{
 			// データから配置するチップを決定する
 			// 二重配列の場合でも、vector配列を先頭から順番に見ていくための処理
-			int chipNo = m_data[(y * kChipIndexY) + x];
+			int chipNo = m_data[(y * kChipIndexX) + x];
 
 			if (chipNo < 0)
 			{
@@ -181,7 +181,6 @@ void Map::Draw()
 			int cutX = indexX * kChipWidth; // インデックスX番号を用いたマップチップの位置を示す変数
 			int cutY = indexY * kChipHeight; // インデックスY番号を用いたマップチップの位置を示す変数
 
-			int a = -200;
 
 			int xnum = kChipHeight * kChipIndexY - Game::kScreenHeight;
 
