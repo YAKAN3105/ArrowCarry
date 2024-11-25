@@ -20,8 +20,6 @@ public:
 
 private:
 	
-
-	int radius;
 	float speed;
 
 	// アニメーション関連

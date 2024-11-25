@@ -29,7 +29,6 @@ Player::Player() :
 	m_isRun(false),
 	m_isDirLeft(false)
 {
-	radius = kPlayerRadius;
 	speed = 2;
 	m_PlayerNowPos = kPlayerPosX;
 }
