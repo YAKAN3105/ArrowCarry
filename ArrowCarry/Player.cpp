@@ -30,7 +30,7 @@ Player::Player() :
 	m_isDirLeft(false)
 {
 	speed = 2;
-	m_PlayerNowPos = kPlayerPosX;
+	m_playerNowPos = kPlayerPosX;
 }
 
 Player::~Player()
@@ -67,7 +67,7 @@ void Player::Update()
 	else if (CheckHitKey(KEY_INPUT_0))
 	{
 		m_isRun = false;
-		m_pos.x = m_PlayerNowPos;
+		m_pos.x = m_playerNowPos;
 	}
 
 	// アニメーションの更新

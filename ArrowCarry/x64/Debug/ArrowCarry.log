@@ -1,17 +1,9 @@
-﻿  Arrow.cpp
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  Map.cpp
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(102,11): warning C4244: '初期化中': 'std::streamoff' から 'int' への変換です。データが失われる可能性があります。
-  Player.cpp
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(21,30): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(70,13): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+﻿  Player.cpp
+C:\Users\杉野雄清\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(21,30): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\杉野雄清\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(70,13): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
   SceneGame.cpp
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  SceneTitle.cpp
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  main.cpp
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  Vec2.cpp
   コードを生成中...
-  ArrowCarry.vcxproj -> C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\x64\Debug\ArrowCarry.exe
+  LINK : 前回のインクリメンタル リンクで C:\Users\杉野雄清\Documents\GitHub\ArrowCarry\ArrowCarry\x64\Debug\ArrowCarry.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
+Map.obj : error LNK2019: 未解決の外部シンボル "int __cdecl DxLib::DeleteGraph(int)" (?DeleteGraph@DxLib@@YAHH@Z) が関数 "public: void __cdecl Map::End(void)" (?End@Map@@QEAAXXZ) で参照されました
+C:\Users\杉野雄清\Documents\GitHub\ArrowCarry\ArrowCarry\x64\Debug\ArrowCarry.exe : fatal error LNK1120: 1 件の未解決の外部参照

@@ -29,7 +29,7 @@ public:
 private:
 
 	void OnPlayerHit();
-	Player* pPlayer;
+	Player* m_pPlayer;
 	Position m_pos;
 	int m_radius;
 

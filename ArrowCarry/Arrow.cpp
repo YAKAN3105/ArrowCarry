@@ -12,7 +12,7 @@ namespace
 }
 
 Arrow::Arrow(Player* playerPointer):
-	pPlayer(playerPointer)
+	m_pPlayer(playerPointer)
 {
 
 }
@@ -55,7 +55,7 @@ void Arrow::Draw()
 	Color = 0xff0000;
 	DrawBox(m_pos.Left,m_pos.Top,m_pos.Right,m_pos.Bottom,Color, TRUE);
 
-	DrawFormatString(0,0,0xffffff,"PlayerPos:%f,%f", pPlayer->GetLeft(), pPlayer->GetTop());
+	DrawFormatString(0,0,0xffffff,"PlayerPos:%f,%f", m_pPlayer->GetLeft(), m_pPlayer->GetTop());
 }
 
 float Arrow::GetLeft()
@@ -81,8 +81,8 @@ float Arrow::GetBottom()
 void Arrow::OnPlayerHit()
 {
 	
-	if (m_pos.Left >= pPlayer->GetRight() &&
-		m_pos.Right >=pPlayer->GetLeft())
+	if (m_pos.Left >= m_pPlayer->GetRight() &&
+		m_pos.Right >=m_pPlayer->GetLeft())
 	{
 		printfDx("“–‚½‚Á‚½I");
 	}

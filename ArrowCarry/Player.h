@@ -16,9 +16,11 @@ public:
 	float GetTop()const;
 	float GetRight()const;
 	float GetBottom()const;
-	Vec2  m_pos;
+	
 
 private:
+
+	Vec2  m_pos;
 	
 	float speed;
 
@@ -36,7 +38,7 @@ private:
 	int m_handleIdle;
 	int m_handleRun;
 
-	int m_PlayerNowPos;
+	int m_playerNowPos;
 	
 
 };
