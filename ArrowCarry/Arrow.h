@@ -17,6 +17,7 @@ public:
 	float GetTop();
 	float GetRight();
 	float GetBottom();
+	void OnPlayerHit();
 
 	struct Position
 	{
@@ -28,7 +29,7 @@ public:
 
 private:
 
-	void OnPlayerHit();
+	
 	Player* m_pPlayer;
 	Position m_pos;
 	int m_radius;

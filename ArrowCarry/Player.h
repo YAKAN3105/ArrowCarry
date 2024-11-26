@@ -16,13 +16,22 @@ public:
 	float GetTop()const;
 	float GetRight()const;
 	float GetBottom()const;
+
+	void IsHitArrow();
+
 	
 
 private:
 
 	Vec2  m_pos;
 	
-	float speed;
+	float m_speed;
+
+	float m_jumpPower;
+
+	bool m_isJump;
+
+	bool m_lastJump;
 
 	// アニメーション関連
 	int m_animFrame; // フレーム数を数える

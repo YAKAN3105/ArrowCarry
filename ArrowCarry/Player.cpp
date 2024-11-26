@@ -20,6 +20,14 @@ namespace
 
 	constexpr float kPlayerPosX = 100;
 	constexpr float kPlayerPosY = 672;
+
+	constexpr float kPlayerHitWidth = 40;
+	constexpr float kPlayerHitHeight = 40;
+
+	constexpr float kGravity = -0.3f;
+
+	constexpr float kJumpSpeed = 10;
+
 }
 
 Player::Player() :
@@ -27,10 +35,13 @@ Player::Player() :
 	m_handleRun(-1),
 	m_animFrame(0),
 	m_isRun(false),
-	m_isDirLeft(false)
+	m_isDirLeft(false),
+	m_isJump(false),
+	m_lastJump(false)
 {
-	speed = 2;
+	m_speed = 2;
 	m_playerNowPos = kPlayerPosX;
+	m_jumpPower = 0;
 }
 
 Player::~Player()
@@ -58,7 +69,7 @@ void Player::End()
 
 void Player::Update()
 { 
-
+	
 	if (CheckHitKey(KEY_INPUT_SPACE))
 	{
 		m_isRun = true;
@@ -92,13 +103,29 @@ void Player::Update()
 
 	if (m_isRun)
 	{
-		m_pos.x += speed;
+		m_pos.x += m_speed;
 	}
 	else if (m_isRun = false)
 	{
 
 	}
 
+	if (m_isJump != m_lastJump && m_isJump == true)	// 
+	{
+		m_jumpPower = -kJumpSpeed;
+	}
+
+	m_jumpPower -= kGravity;
+	m_pos.y += m_jumpPower;
+
+	if (m_pos.y > kPlayerPosY)
+	{
+		m_pos.y = kPlayerPosY;
+	}
+
+
+	m_lastJump = m_isJump;
+	m_isJump = false;
 
 	////処理を行った結果、アニメーションが変わっていた場合の処理
 	//if (m_isRun != isLastRun)
@@ -129,6 +156,11 @@ float Player::GetBottom() const
 	return m_pos.y;
 }
 
+void Player::IsHitArrow()
+{
+	m_isJump = true;
+}
+
 void Player::Draw()
 {
 	/*Color = GetColor(0, 0, 255);
@@ -147,4 +179,9 @@ void Player::Draw()
 	DrawRectGraph(static_cast<int>(m_pos.x - kGraphWidth / 2), static_cast<int>(m_pos.y - kGraphHeight / 2),
 		animNo * kGraphWidth, 0, kGraphWidth, kGraphHeight,
 		useHandle, true, m_isDirLeft);
+
+	// あたりはんていをつける
+	DrawBox(m_pos.x - kPlayerHitWidth * 0.5f, m_pos.y - kPlayerHitHeight * 0.5f,
+		m_pos.x + kPlayerHitWidth * 0.5f, m_pos.y + kPlayerHitHeight * 0.5f,
+		0xff0000, false);
 }

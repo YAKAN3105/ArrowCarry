@@ -29,9 +29,12 @@ void SceneGame::Init()
 void SceneGame::Update()
 {
 	player->Update();
+
 	arrow->Update();
 	map->Update();
 	int i = 0;
+
+	arrow->OnPlayerHit();
 
 	if (CheckHitKey(KEY_INPUT_RETURN)) // EnterƒL[‚ğ‰Ÿ‚·‚Æ
 	{

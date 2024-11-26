@@ -34,6 +34,7 @@ void Arrow::Update()
 	m_pos.Bottom = 680;
 	m_pos.Left = 600;
 	m_pos.Right = 680;
+
 }
 
 void Arrow::Draw()
@@ -80,10 +81,10 @@ float Arrow::GetBottom()
 
 void Arrow::OnPlayerHit()
 {
-	
-	if (m_pos.Left >= m_pPlayer->GetRight() &&
+	if (m_pos.Left <= m_pPlayer->GetRight() &&
 		m_pos.Right >=m_pPlayer->GetLeft())
 	{
+		m_pPlayer->IsHitArrow();
 		printfDx("ìñÇΩÇ¡ÇΩÅI");
 	}
 }
