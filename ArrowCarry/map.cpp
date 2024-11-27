@@ -2,7 +2,6 @@
 #include <DxLib.h>
 #include "game.h"
 
-#include<iostream>
 #include <cassert>
 #include<fstream>
 #include<string>
@@ -15,10 +14,10 @@ namespace
 	constexpr int kChipWidth = 32;
 	constexpr int kChipHeight = 32;
 
-	constexpr int kPartsNumX = 16; // 
+	constexpr int kPartsNumX = 16; // パーツの選択範囲
 	constexpr int kPartsNumY = 16;
 
-	constexpr int kChipIndexX = 40;	// 
+	constexpr int kChipIndexX = 40;	// マップチップの要素数
 	constexpr int kChipIndexY = 32;
 
 	// マップに敷き詰めるチップの数
