@@ -29,7 +29,7 @@ private:
 
 	float m_jumpPower;
 
-	bool m_isJump;
+	bool m_isJump;	// ƒWƒƒƒ“ƒv‚ð‚µ‚Ä‚¢‚é‚©‚Ç‚¤‚©
 
 	bool m_lastJump;
 
