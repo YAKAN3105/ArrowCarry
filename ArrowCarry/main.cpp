@@ -4,13 +4,10 @@
 #include "SceneGame.h"
 #include "SceneResult.h"
 
-
-
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	// 一部のDxLib関数はDxLib_Init()の前に呼ぶ必要がある
-
 	// フルスクリーンではなく、ウィンドウモードで開く
 	ChangeWindowMode(Game::kDefaultWindowMode);
 	// 画面のサイズを変更する

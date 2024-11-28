@@ -101,7 +101,9 @@ float Arrow::GetBottom()
 void Arrow::OnPlayerHit()
 {
 	if (GetLeft() <= m_pPlayer->GetRight() &&
-		GetRight() >= m_pPlayer->GetLeft())
+		GetRight() >= m_pPlayer->GetLeft() &&
+		GetTop() <=m_pPlayer->GetBottom() &&
+		GetBottom() >=m_pPlayer->GetTop() )
 	{
 		m_pPlayer->IsHitArrow();
 		printfDx("ìñÇΩÇ¡ÇΩÅI\n");

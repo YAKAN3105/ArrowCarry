@@ -15,7 +15,7 @@ public:
 
 private:
 	// ‰Šú‰»
-	Player* player;
-	Arrow* arrow;
-	Map* map;
+	Player* m_pPlayer;
+	Arrow* m_pArrow;
+	Map* m_pMap;
 };

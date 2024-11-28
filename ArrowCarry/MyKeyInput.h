@@ -11,7 +11,7 @@ private:
 	/*staticメンバ変数*/
 	//それぞれのKeyの入力フレーム数
 	// 定義だけ行い、実態はグローバルで作成
-	static int KeyFrame[];
+	static int m_keyFrame[];
 public:
 	
 	//
@@ -22,4 +22,4 @@ public:
 };
 
 // 静的メンバ変数の実態作成
-int MyKeyInput::KeyFrame[256];
+int MyKeyInput::m_keyFrame[256];

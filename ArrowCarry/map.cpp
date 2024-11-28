@@ -1,9 +1,7 @@
 #include "map.h"
 #include <DxLib.h>
-#include "game.h"
 
 #include <cassert>
-#include<fstream>
 #include<string>
 
 
@@ -30,7 +28,8 @@ namespace
 
 // コンストラクタでメンバ変数の初期化を行う
 // コンストラクタ初期化子を使用して初期化する
-Map::Map():
+Map::Map(Player*playerPointer):
+	m_pPlayer(playerPointer),
 	m_handle(-1),
 	m_graphChipNumX(0),
 	m_graphChipNumY(0)
@@ -192,4 +191,71 @@ void Map::Draw()
 				m_handle, true);			// 
 		}
 	}
+}
+
+int Map::GetLeft(int x)
+{
+	return x *kChipWidth -(kChipWidth * 0.5f);
+}
+
+int Map::GetTop(int y)
+{
+	return y* kChipHeight + (kChipHeight * 0.5f);
+}
+
+int Map::GetRight(int x)
+{
+	return x* kChipWidth + (kChipWidth * 0.5f);
+}
+
+int Map::GetBottom(int y)
+{
+	return y* kChipHeight - (kChipHeight * 0.5f);
+}
+
+void Map::CheckHit()
+{
+	for (int y = 0; y < kChipIndexY; y++)
+	{
+		for (int x = 0; x < kChipIndexX; x++)
+		{
+			// データから配置するチップを決定する
+			// 二重配列の場合でも、vector配列を先頭から順番に見ていくための処理
+			int chipNo = m_data[(y * kChipIndexX) + x];
+
+			if (chipNo < 0 || chipNo == 164)
+			{
+				// continueは繰り返し文(for,while)の中で使用する命令
+				// continueが呼ばれたら以降の繰り返し処理は行わず次のループに移行する
+				continue;
+			}
+
+			// ここにプレイヤーとマップが当たっているかの判定を行う
+			// あたっていなかったら次のマップチップへ
+			if (!IsHit( x, y))
+			{
+				continue;
+			}
+
+			// ここまで来たら当たっている
+			// 位置を修正してあげる
+			FixPos(x, y);
+		}
+	}
+}
+
+bool Map::IsHit(int x, int y)
+{
+	if ((GetLeft(x) < m_pPlayer->GetRight() &&
+		GetRight(x) > m_pPlayer->GetLeft() &&
+		GetTop(y) < m_pPlayer->GetBottom() &&
+		GetBottom(y) > m_pPlayer->GetTop()))
+	{
+		return true;
+	}
+	return false;
+}
+
+void Map::FixPos(int x, int y)
+{
 }
