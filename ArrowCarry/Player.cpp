@@ -181,7 +181,7 @@ void Player::Draw()
 		useHandle, true, m_isDirLeft);
 
 	// ‚ ‚½‚è‚Í‚ñ‚Ä‚¢‚ð‚Â‚¯‚é
-	DrawBox(m_pos.x - kPlayerHitWidth * 0.4f, m_pos.y - kPlayerHitHeight * 0.4f,
-		m_pos.x + kPlayerHitWidth * 0.2f, m_pos.y + kPlayerHitHeight * 0.4f,
+	DrawBox(m_pos.x - kPlayerHitWidth * 0.5f, m_pos.y - kPlayerHitHeight * 0.5f,
+		m_pos.x + kPlayerHitWidth * 0.5f, m_pos.y + kPlayerHitHeight * 0.5f,
 		0xff0000, false);
 }

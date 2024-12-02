@@ -26,13 +26,16 @@ namespace
 
 }
 
+
+
 // コンストラクタでメンバ変数の初期化を行う
 // コンストラクタ初期化子を使用して初期化する
 Map::Map(Player*playerPointer):
 	m_pPlayer(playerPointer),
 	m_handle(-1),
 	m_graphChipNumX(0),
-	m_graphChipNumY(0)
+	m_graphChipNumY(0),
+	m_offsetPosY(kChipHeight* kChipIndexY - Game::kScreenHeight)
 {
 }
 
@@ -180,41 +183,20 @@ void Map::Draw()
 			int cutY = indexY * kChipHeight; // インデックスY番号を用いたマップチップの位置を示す変数
 
 
-			int xnum = kChipHeight * kChipIndexY - Game::kScreenHeight;
+			 
 
 
 			DrawRectGraph
 			(x * kChipWidth,				// グラフィックを描画する座標
-				y * kChipHeight -xnum,
+				y * kChipHeight - m_offsetPosY,
 				cutX, cutY,					// 描画するグラフィック上の描画したい矩形の左上座標
 				kChipWidth, kChipHeight,	// 描画するグラフィックのサイズ
-				m_handle, true);			// 
+				m_handle, true);			// 透過処理するかどうか
 		}
 	}
-}
 
-int Map::GetLeft(int x)
-{
-	return x *kChipWidth -(kChipWidth * 0.5f);
-}
 
-int Map::GetTop(int y)
-{
-	return y* kChipHeight + (kChipHeight * 0.5f);
-}
-
-int Map::GetRight(int x)
-{
-	return x* kChipWidth + (kChipWidth * 0.5f);
-}
-
-int Map::GetBottom(int y)
-{
-	return y* kChipHeight - (kChipHeight * 0.5f);
-}
-
-void Map::CheckHit()
-{
+	//マップチップ当たり判定用の描画
 	for (int y = 0; y < kChipIndexY; y++)
 	{
 		for (int x = 0; x < kChipIndexX; x++)
@@ -223,7 +205,73 @@ void Map::CheckHit()
 			// 二重配列の場合でも、vector配列を先頭から順番に見ていくための処理
 			int chipNo = m_data[(y * kChipIndexX) + x];
 
-			if (chipNo < 0 || chipNo == 164)
+			if (chipNo < 0)
+			{
+				// continueは繰り返し文(for,while)の中で使用する命令
+				// continueが呼ばれたら以降の繰り返し処理は行わず次のループに移行する
+				continue;
+			}
+
+			// 0から始まる通し番号を
+			// 上から何個目、左から何個目なのか、という情報に変換する必要がある
+			// グラフィックに何個チップが含まれているか、という情報を使用して
+			// 計算で求める
+			int indexX = chipNo % kPartsNumX; // 左から何個目のチップか
+			int indexY = chipNo / kPartsNumY; // 上から何個目のチップか
+
+
+			// チップ番号から切り出し位置を計算する
+			int cutX = indexX * kChipWidth; // インデックスX番号を用いたマップチップの位置を示す変数
+			int cutY = indexY * kChipHeight; // インデックスY番号を用いたマップチップの位置を示す変数
+
+
+			m_offsetPosY = kChipHeight * kChipIndexY - Game::kScreenHeight;
+
+
+			DrawBox(
+				GetLeft(x),				// グラフィックを描画する座標
+				GetTop(y),
+				GetRight(x),
+				GetBottom(y),	// 描画するグラフィックのサイズ
+				0xff0000,
+				false);
+		}
+	}
+}
+
+int Map::GetLeft(int x)
+{
+	return x *kChipWidth;	// マップチップの左側の座標
+}
+
+int Map::GetTop(int y)
+{
+	return y* kChipHeight- m_offsetPosY;	// マップチップの
+}
+
+int Map::GetRight(int x)
+{
+	return x* kChipWidth + kChipWidth;
+}
+
+int Map::GetBottom(int y)
+{
+	return y* kChipHeight - kChipHeight - m_offsetPosY;
+}
+
+void Map::CheckHit()
+{
+	bool a = false;
+
+	for (int y = 0; y < kChipIndexY; y++)
+	{
+		for (int x = 0; x < kChipIndexX; x++)
+		{
+			// データから配置するチップを決定する
+			// 二重配列の場合でも、vector配列を先頭から順番に見ていくための処理
+			int chipNo = m_data[(y * kChipIndexX) + x];
+
+			if (chipNo < 0 || chipNo == 243)
 			{
 				// continueは繰り返し文(for,while)の中で使用する命令
 				// continueが呼ばれたら以降の繰り返し処理は行わず次のループに移行する
@@ -240,7 +288,14 @@ void Map::CheckHit()
 			// ここまで来たら当たっている
 			// 位置を修正してあげる
 			FixPos(x, y);
+
+			a = true;
 		}
+	}
+
+	if (!a)
+	{
+		printfDx("あたってない\n");
 	}
 }
 
@@ -258,4 +313,5 @@ bool Map::IsHit(int x, int y)
 
 void Map::FixPos(int x, int y)
 {
+	printfDx("あたってるー\n");
 }

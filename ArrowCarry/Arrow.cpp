@@ -106,10 +106,10 @@ void Arrow::OnPlayerHit()
 		GetBottom() >=m_pPlayer->GetTop() )
 	{
 		m_pPlayer->IsHitArrow();
-		printfDx("“–‚½‚Á‚½I\n");
+		//printfDx("“–‚½‚Á‚½I\n");
 	}
 	else
 	{
-		printfDx("“–‚½‚Á‚Ä‚È‚¢\n");
+		//printfDx("“–‚½‚Á‚Ä‚È‚¢\n");
 	}
 }

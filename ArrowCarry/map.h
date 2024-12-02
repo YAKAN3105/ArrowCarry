@@ -48,6 +48,8 @@ private:
 
 	int m_fileSize; // 外部ファイルの大きさを保存するための変数
 
+	int m_offsetPosY; // マップチップの座標Yの補完
+
 
 	
 };
