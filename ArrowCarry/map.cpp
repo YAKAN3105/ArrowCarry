@@ -287,7 +287,7 @@ void Map::CheckHit()
 
 			// ここまで来たら当たっている
 			// 位置を修正してあげる
-			FixPos(x, y);
+			ChangePlayerHitFlag();
 
 			a = true;
 		}
@@ -311,7 +311,9 @@ bool Map::IsHit(int x, int y)
 	return false;
 }
 
-void Map::FixPos(int x, int y)
+void Map::ChangePlayerHitFlag()
 {
 	printfDx("あたってるー\n");
+	// プレイヤーに当たったことを伝える
+	m_pPlayer->ChangeHitMap();
 }

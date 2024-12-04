@@ -31,7 +31,8 @@ public:
 private:
 
 	bool IsHit(int x, int y);
-	void FixPos(int x, int y);
+
+	void ChangePlayerHitFlag();
 
 private:
 

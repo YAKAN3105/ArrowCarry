@@ -1,3 +1,4 @@
+#pragma once
 #include "Arrow.h"
 #include<DxLib.h>
 #include "game.h"
@@ -68,7 +69,8 @@ void Arrow::Draw()
 	// 0b0101 0101  0101 0101  0101 0101
 	// 
 	//	Color = GetColor(255, 0, 0);
-	Color = 0xff0000;
+	Color = 0xffff00;
+	// –îˆó‚Ì“–‚½‚è”»’è
 #if _DEBUG
 	DrawBox(GetLeft(), GetTop(), GetRight(), GetBottom(), Color, false);
 #endif // DEBUG

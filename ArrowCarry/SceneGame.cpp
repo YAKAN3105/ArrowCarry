@@ -10,7 +10,7 @@ namespace
 
 SceneGame::SceneGame()
 {
-	m_pPlayer= new Player;
+	m_pPlayer= new Player(m_pMap);
 	m_pArrow = new Arrow(m_pPlayer);
 	m_pMap = new Map(m_pPlayer);
 }

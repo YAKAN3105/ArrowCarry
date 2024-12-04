@@ -21,3 +21,13 @@ public:
 	}
 };
 
+//演算子オーバーロード
+//a+b ,a.x+b.X ....
+static Vec2 operator+(const Vec2& Left,const Vec2& Right)
+{
+	Vec2 ans;
+	ans.x = Left.x + Right.x;
+	ans.y = Left.y + Right.y;
+	return ans;
+}
+

@@ -1,14 +1,19 @@
 #pragma once
 #include "Vec2.h"
+#include<math.h>
+#include"map.h"
+class Map;
+
 class Player
 {
 public:
-	Player();
+	Player(Map* mapPointer);
 	~Player();
 
 	void Init();
 	void End();
 	void Update();
+	void AnimationUpdate();
 	void Draw();
 
 	// プレイヤーの位置情報を取得する
@@ -18,18 +23,26 @@ public:
 	float GetBottom()const;
 
 	void IsHitArrow();
-
+	void ChangeHitMap();
 	
+	// 速度を0にする
+	void InitVelocity(); 
+	void ChangePosMapHit();
 
 private:
 
+	Map* m_pMap;
 	Vec2  m_pos;
+	Vec2 m_backPos;
+	Vec2 m_velocity;
 	
 	float m_speed;
 
 	float m_jumpPower;
 
-	bool m_isJump;	// ジャンプをしているかどうか
+	bool m_isJumpNow;	//ジャンプした瞬間かどうか
+	bool m_isFalling; //落下中かどうか
+	bool m_isMapHit;//マップにあたっているかどうか
 
 	bool m_lastJump;
 
@@ -48,6 +61,7 @@ private:
 	int m_handleRun;
 
 	int m_playerNowPos;
+
 	
 
 };

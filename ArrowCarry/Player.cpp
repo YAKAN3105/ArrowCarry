@@ -1,6 +1,8 @@
+#pragma once
 #include "Player.h"
 #include <DxLib.h>
 #include<cassert>
+
 namespace
 {
 	unsigned int Color;
@@ -24,19 +26,22 @@ namespace
 	constexpr float kPlayerHitWidth = 40;
 	constexpr float kPlayerHitHeight = 40;
 
-	constexpr float kGravity = -0.3f;
+	constexpr float kGravity = -0.1f;
 
 	constexpr float kJumpSpeed = 10;
 
 }
 
-Player::Player() :
+Player::Player(Map* mapPointer) :
+	m_pMap(mapPointer),
 	m_handleIdle(-1),
 	m_handleRun(-1),
 	m_animFrame(0),
 	m_isRun(false),
 	m_isDirLeft(false),
-	m_isJump(false),
+	m_isJumpNow(false),
+	m_isFalling(false),
+	m_isMapHit(false),
 	m_lastJump(false)
 {
 	m_speed = 2;
@@ -58,6 +63,8 @@ void Player::Init()
 
 	m_pos.x = kPlayerPosX;
 	m_pos.y = kPlayerPosY;
+	m_velocity.x = 0;
+	m_velocity.y = 0;
 }
 
 void Player::End()
@@ -69,7 +76,21 @@ void Player::End()
 
 void Player::Update()
 { 
-	
+	//マップと当たっているかどうか
+	if (m_isMapHit)
+	{
+		ChangePosMapHit();
+		m_isMapHit = false;
+		m_isFalling = false;
+	}
+
+	//前のフレームの位置の保存
+	m_backPos = m_pos;
+
+	//位置の更新
+	m_pos = m_pos + m_velocity;
+
+	//キー入力の確認
 	if (CheckHitKey(KEY_INPUT_SPACE))
 	{
 		m_isRun = true;
@@ -78,14 +99,59 @@ void Player::Update()
 	else if (CheckHitKey(KEY_INPUT_0))
 	{
 		m_isRun = false;
-		m_pos.x = m_playerNowPos;
+		m_pos.x = m_playerNowPos;//初期位置に戻る
 	}
 
+
+#if _DEBUG
+	// 一旦キーを押して動かせるようにする
+	if (CheckHitKey(KEY_INPUT_RIGHT))
+	{
+		m_isRun = true;
+		m_velocity.x = m_speed;
+		m_isDirLeft = false;
+	}
+	if (CheckHitKey(KEY_INPUT_LEFT))
+	{
+		m_isRun = true;
+		m_velocity.x = -m_speed;
+		m_isDirLeft = true;
+	}
+#endif // DEBUG
+
+
+	//アニメーションの更新
+	AnimationUpdate();
+
+	//速度の更新
+	/*if (m_isRun)
+	{
+		m_velocity.x = m_speed;
+	}*/
+
+	//ジャンプ
+	if (m_isJumpNow)
+	{
+		m_velocity.y -= 0.4f;
+		m_isJumpNow = false;
+		m_isFalling = true;
+	}
+	//落下
+	if (m_isFalling)
+	{
+		m_velocity.y -= kGravity;
+	}
+
+
+
+}
+
+void Player::AnimationUpdate()
+{
 	// アニメーションの更新
 	m_animFrame++;
 
 	// 待機中とあるいているときのフレーム数は0^78
-
 	int totalFlame = kIdleAnimNum * kSingleAnimFrame;
 	if (m_isRun)
 	{
@@ -97,41 +163,6 @@ void Player::Update()
 	{
 		m_animFrame = 0;
 	}
-
-	// 前回のアニメーションの状態を覚えておく
-	//bool isLastRun = m_isRun;
-
-	if (m_isRun)
-	{
-		m_pos.x += m_speed;
-	}
-	else if (m_isRun = false)
-	{
-
-	}
-
-	if (m_isJump != m_lastJump && m_isJump == true)	// 
-	{
-		m_jumpPower = -kJumpSpeed;
-	}
-
-	m_jumpPower -= kGravity;
-	m_pos.y += m_jumpPower;
-
-	if (m_pos.y > kPlayerPosY)
-	{
-		m_pos.y = kPlayerPosY;
-	}
-
-
-	m_lastJump = m_isJump;
-	m_isJump = false;
-
-	////処理を行った結果、アニメーションが変わっていた場合の処理
-	//if (m_isRun != isLastRun)
-	//{
-	//	m_animFrame = 0;
-	//}
 }
 
 
@@ -158,7 +189,30 @@ float Player::GetBottom() const
 
 void Player::IsHitArrow()
 {
-	m_isJump = true;
+	m_isJumpNow = true;
+}
+
+void Player::ChangeHitMap()
+{
+	if (GetLeft() > m_pMap->GetRight(32) &&
+		GetRight() < m_pMap->GetLeft(32) &&
+		GetTop() < m_pMap->
+		GetBottom(32) && GetBottom() < m_pMap->GetTop(32));
+	m_isMapHit = true;
+}
+void Player::InitVelocity()
+{
+	Vec2 zero{0,0};
+	m_velocity = zero;
+}
+
+void Player::ChangePosMapHit()
+{
+	//速度を止める
+	InitVelocity();
+	//1フレーム前の位置に戻す
+	m_pos = m_backPos;
+	m_isRun = true;
 }
 
 void Player::Draw()
@@ -176,12 +230,12 @@ void Player::Draw()
 		useHandle = m_handleRun;
 	}
 
-	DrawRectGraph(static_cast<int>(m_pos.x - kGraphWidth / 2), static_cast<int>(m_pos.y - kGraphHeight / 2),
+	DrawRectGraph(static_cast<int>(m_pos.x - kGraphWidth *0.4f), static_cast<int>(m_pos.y - kGraphHeight * 0.5f),
 		animNo * kGraphWidth, 0, kGraphWidth, kGraphHeight,
 		useHandle, true, m_isDirLeft);
 
 	// あたりはんていをつける
 	DrawBox(m_pos.x - kPlayerHitWidth * 0.5f, m_pos.y - kPlayerHitHeight * 0.5f,
 		m_pos.x + kPlayerHitWidth * 0.5f, m_pos.y + kPlayerHitHeight * 0.5f,
-		0xff0000, false);
+		0x0000ff, false);
 }
