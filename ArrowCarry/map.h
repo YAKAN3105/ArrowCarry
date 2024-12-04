@@ -1,10 +1,5 @@
 #pragma once
-#include <iostream>
-#include <fstream>
-#include<vector>
-#include<cassert>
-#include"Player.h"
-#include"game.h"
+#include <vector>
 
 namespace
 {
@@ -32,6 +27,7 @@ private:
 
 	bool IsHit(int x, int y);
 
+	// マップとプレイヤーが当たったことを伝える
 	void ChangePlayerHitFlag();
 
 private:

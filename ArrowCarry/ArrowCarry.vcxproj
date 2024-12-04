@@ -153,6 +153,7 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="MyKeyInput.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Rect.h" />
     <ClInclude Include="SceneBase.h" />
     <ClInclude Include="SceneGame.h" />
     <ClInclude Include="SceneResult.h" />

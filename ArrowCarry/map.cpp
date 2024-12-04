@@ -1,8 +1,10 @@
 #include "map.h"
 #include <DxLib.h>
-
+#include<vector>
 #include <cassert>
 #include<string>
+#include"Player.h"
+#include"game.h"
 
 
 // ’è”‚Ì’è‹`

@@ -1,6 +1,8 @@
 #pragma once
-#include"Vec2.h"
 #include<cassert>
+#include"Vec2.h"
+#include "Rect.h"
+
 class Player;
 
 class Arrow
@@ -14,23 +16,15 @@ public:
 	void Update();
 	void Draw();
 
-	// –î‚Ìî•ñ‚ğæ“¾‚·‚é
-	float GetLeft();
-	float GetTop();
-	float GetRight();
-	float GetBottom();
-	void OnPlayerHit();
-
-	//int Top;
-	//int Bottom;
-	//int Left;
-	//int Right;
+	Rect GetRect() const { return m_rect; }
 
 private:
 
 	
 	Player* m_pPlayer;
 	Vec2 m_pos;
+	Rect m_rect;
+
 	int m_radius;
 
 	int m_handleUpArrow;

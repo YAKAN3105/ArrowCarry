@@ -1,7 +1,10 @@
 #pragma once
-#include "Vec2.h"
 #include<math.h>
+#include "Vec2.h"
 #include"map.h"
+
+
+
 class Map;
 
 class Player
@@ -16,14 +19,12 @@ public:
 	void AnimationUpdate();
 	void Draw();
 
-	// プレイヤーの位置情報を取得する
-	float GetLeft()const;
-	float GetTop()const;
-	float GetRight()const;
-	float GetBottom()const;
+	Rect GetRect() const { return m_rect; }
 
 	void IsHitArrow();
 	void ChangeHitMap();
+
+	void CheckHitMap();
 	
 	// 速度を0にする
 	void InitVelocity(); 

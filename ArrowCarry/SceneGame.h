@@ -1,8 +1,11 @@
 #pragma once
 #include "SceneBase.h"
-#include"Player.h"
-#include "Arrow.h"
-#include "map.h"
+
+class Map;
+class Player;
+class Arrow;
+class Rect;
+
 class SceneGame : public SceneBase
 {
 public:
@@ -13,7 +16,12 @@ public:
 	virtual void Update() override;
 	virtual void Draw() override;
 
+
 private:
+	void CheckHit();
+	// rect1がプレイヤーrect2が矢印とかマップチップ
+	bool IsBoxHit(const Rect& rect1, const Rect& rect2);
+	 
 	// 初期化
 	Player* m_pPlayer;
 	Arrow* m_pArrow;

@@ -77,12 +77,13 @@ void Player::End()
 void Player::Update()
 { 
 	//マップと当たっているかどうか
-	if (m_isMapHit)
-	{
-		ChangePosMapHit();
-		m_isMapHit = false;
-		m_isFalling = false;
-	}
+	CheckHitMap();
+	//if (m_isMapHit)
+	//{
+	//	ChangePosMapHit();
+	//	m_isMapHit = false;
+	//	m_isFalling = false;
+	//}
 
 	//前のフレームの位置の保存
 	m_backPos = m_pos;
@@ -199,6 +200,12 @@ void Player::ChangeHitMap()
 		GetTop() < m_pMap->
 		GetBottom(32) && GetBottom() < m_pMap->GetTop(32));
 	m_isMapHit = true;
+}
+void Player::CheckHitMap()
+{
+	// 全マップチップと判定を行う
+
+	// 当たっていた場合はChangePosMapHit()これを呼ぶ？
 }
 void Player::InitVelocity()
 {

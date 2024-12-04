@@ -6,40 +6,21 @@ C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(75,27): war
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(75,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
   main.cpp
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(17,6): error C2061: 構文エラー: 識別子 'Player'
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(39,8): error C2143: 構文エラー: ';' が '*' の前にありません。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(39,8): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(39,19): error C2238: ';' の前に無効なトークンがあります。
   Map.cpp
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(103,11): warning C4244: '初期化中': 'std::streamoff' から 'int' への変換です。データが失われる可能性があります。
   Player.cpp
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(17,6): error C2061: 構文エラー: 識別子 'Player'
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(39,8): error C2143: 構文エラー: ';' が '*' の前にありません。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(39,8): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(39,19): error C2238: ';' の前に無効なトークンがあります。
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(23,30): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(102,13): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(200,53): warning C4390: ';': 制御が空の文が見つかりました。意図した記述でしょうか?
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(239,45): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(239,11): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(238,52): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(238,18): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(103,13): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(201,53): warning C4390: ';': 制御が空の文が見つかりました。意図した記述でしょうか?
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(246,45): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(246,11): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(245,52): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(245,18): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
   SceneGame.cpp
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(17,6): error C2061: 構文エラー: 識別子 'Player'
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(39,8): error C2143: 構文エラー: ';' が '*' の前にありません。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(39,8): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(39,19): error C2238: ';' の前に無効なトークンがあります。
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\SceneGame.cpp(15,29): error C2664: 'Map::Map(const Map &)': 引数 1 を 'Player *' から 'const Map &' へ変換できません。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\SceneGame.cpp(15,29): message : 理由: 'Player *' から 'const Map' へは変換できません。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\SceneGame.cpp(15,29): message : コンストラクターはソース型を持てません、またはコンストラクターのオーバーロードの解決があいまいです。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(56,1): message : 'Map::Map' の宣言を確認してください
   SceneTitle.cpp
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(17,6): error C2061: 構文エラー: 識別子 'Player'
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(39,8): error C2143: 構文エラー: ';' が '*' の前にありません。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(39,8): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(39,19): error C2238: ';' の前に無効なトークンがあります。
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   コードを生成中...
+  ArrowCarry.vcxproj -> C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\x64\Debug\ArrowCarry.exe
