@@ -1,4 +1,5 @@
 #pragma once
+#include "Vec2.h"
 
 class Rect
 {
@@ -12,11 +13,24 @@ public:
 	/// <param name="height">高さ</param>
 	void Init(float x, float y, float width, float height)
 	{
+		m_pos.x = x;
+		m_pos.y = y;
 		m_width  = width;
 		m_height = height;
-		m_x = x;
-		m_y = y;
 	}
+	/// <summary>
+	/// 初期化
+	/// </summary>
+	/// <param name="pos">中心座標</param>
+	/// <param name="width">幅</param>
+	/// <param name="height">高さ</param>
+	void Init(const Vec2& pos, float width, float height)
+	{
+		m_pos = pos;
+		m_width = width;
+		m_height = height;
+	}
+
 	/// <summary>
 	/// 中心を更新
 	/// </summary>
@@ -24,8 +38,16 @@ public:
 	/// <param name="y">Y座標</param>
 	void UpdateCenter(float x, float y)
 	{
-		m_x = x;
-		m_y = y;
+		m_pos.x = x;
+		m_pos.y = y;
+	}
+	/// <summary>
+	/// 中心を更新
+	/// </summary>
+	/// <param name="pos">座標</param>
+	void UpdateCenter(const Vec2& pos)
+	{
+		m_pos = pos;
 	}
 
 	/// <summary>
@@ -34,7 +56,7 @@ public:
 	/// <returns>x - widht * 0.5f</returns>
 	float GetLeft() const
 	{
-		return m_x - m_width * 0.5f;
+		return m_pos.x - m_width * 0.5f;
 	}
 	/// <summary>
 	/// 右側を取得
@@ -42,7 +64,7 @@ public:
 	/// <returns>x - widht * 0.5f</returns>
 	float GetRight() const
 	{
-		return m_x + m_width * 0.5f;
+		return m_pos.x + m_width * 0.5f;
 	}
 	/// <summary>
 	/// 上側を取得
@@ -50,7 +72,7 @@ public:
 	/// <returns>y - hegiht * 0.5f</returns>
 	float GetTop() const
 	{
-		return m_y - m_height * 0.5f;
+		return m_pos.y - m_height * 0.5f;
 	}
 	/// <summary>
 	/// 下側を取得
@@ -58,13 +80,12 @@ public:
 	/// <returns>y + hegiht * 0.5f</returns>
 	float GetBottom() const
 	{
-		return m_y + m_height * 0.5f;
+		return m_pos.y + m_height * 0.5f;
 	}
 
 private:
-	// 左右上下の位置
-	float m_x;
-	float m_y;
+	// 中心
+	Vec2 m_pos;
 	// 判定の幅・高さ
 	float m_width;
 	float m_height;

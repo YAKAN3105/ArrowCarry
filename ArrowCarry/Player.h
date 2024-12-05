@@ -2,8 +2,7 @@
 #include<math.h>
 #include "Vec2.h"
 #include"map.h"
-
-
+#include "Rect.h"
 
 class Map;
 

@@ -62,7 +62,7 @@ void SceneGame::Draw()
 void SceneGame::CheckHit()
 {
 	// プレイヤーと全マップチップとの当たり判定
-
+	
 	// プレイヤーと全矢印との当たり判定
 	
 }

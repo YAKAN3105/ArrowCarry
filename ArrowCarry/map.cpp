@@ -14,6 +14,7 @@ namespace
 	constexpr int kChipWidth = 32;
 	constexpr int kChipHeight = 32;
 
+
 	constexpr int kPartsNumX = 16; // パーツの選択範囲
 	constexpr int kPartsNumY = 16;
 

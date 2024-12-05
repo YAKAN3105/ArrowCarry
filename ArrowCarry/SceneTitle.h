@@ -9,5 +9,9 @@ public:
 	void Init();
 	void Update();
 	void Draw();
+private:
+
+	// グラフィックのハンドル
+	int m_handle;
 };
 

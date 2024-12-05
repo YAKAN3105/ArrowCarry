@@ -1,18 +1,112 @@
 ﻿  Arrow.cpp
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(75,52): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(75,39): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(75,27): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(75,17): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  main.cpp
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,7): error C2039: 'vector': 'std' のメンバーではありません
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stddef.h(23): message : 'std' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,13): error C2143: 構文エラー: ';' が '<' の前にありません。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,13): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,36): error C2238: ';' の前に無効なトークンがあります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(21,32): error C2065: 'm_rect': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(75,10): error C3861: 'GetLeft': 識別子が見つかりませんでした
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(75,21): error C3861: 'GetTop': 識別子が見つかりませんでした
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(75,31): error C3861: 'GetRight': 識別子が見つかりませんでした
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(75,43): error C3861: 'GetBottom': 識別子が見つかりませんでした
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(80,62): error C2039: 'GetLeft': 'Player' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(9): message : 'Player' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(80,84): error C2039: 'GetTop': 'Player' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(9): message : 'Player' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(83,14): error C2039: 'GetLeft': 'Arrow' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.h(8): message : 'Arrow' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(85,10): error C2065: 'm_pos': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(88,14): error C2039: 'GetTop': 'Arrow' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.h(8): message : 'Arrow' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(90,10): error C2065: 'm_pos': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(93,14): error C2039: 'GetRight': 'Arrow' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.h(8): message : 'Arrow' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(95,10): error C2065: 'm_pos': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(98,14): error C2039: 'GetBottom': 'Arrow' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.h(8): message : 'Arrow' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(100,9): error C2065: 'm_pos': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(103,13): error C2039: 'OnPlayerHit': 'Arrow' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.h(8): message : 'Arrow' の宣言を確認してください
   Map.cpp
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(12,6): error C2061: 構文エラー: 識別子 'Player'
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(35,8): error C2143: 構文エラー: ';' が '*' の前にありません。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(35,8): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(35,19): error C2238: ';' の前に無効なトークンがあります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,7): error C2039: 'vector': 'std' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\predefined C++ types (compiler internal)(341): message : 'std' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,13): error C2143: 構文エラー: ';' が '<' の前にありません。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,13): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,36): error C2238: ';' の前に無効なトークンがあります。
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(103,11): warning C4244: '初期化中': 'std::streamoff' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(21,32): error C2065: 'm_rect': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(36,31): error C2511: 'Map::Map(Player *)': オーバーロードされたメンバー関数が 'Map' にありません。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(7): message : 'Map' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(42,1): error C2550: 'Map::{ctor}': コンストラクターの初期化子リストはコンストラクターの定義だけに許されます。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(94,16): error C2079: 'ifs' が 未定義の class 'std::basic_ifstream<char,std::char_traits<char>>' で使用しています。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(94,29): error C2440: '初期化中': 'const char *const ' から 'int' に変換できません。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(94,19): message : この変換が可能なコンテキストはありません。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(100,8): error C2039: 'cerr': 'std' のメンバーではありません
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\string(24): message : 'std' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(100,13): error C2065: 'cerr': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(100,50): error C2039: 'endl': 'std' のメンバーではありません
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\string(24): message : 'std' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(100,54): error C2065: 'endl': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(105,25): error C2027: 認識できない型 'std::basic_ios<char,std::char_traits<char>>' が使われています。
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\iosfwd(233): message : 'std::basic_ios<char,std::char_traits<char>>' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(105,28): error C2065: 'end': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(110,7): error C2039: 'cout': 'std' のメンバーではありません
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\string(24): message : 'std' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(110,12): error C2065: 'cout': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(110,40): error C2039: 'endl': 'std' のメンバーではありません
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\string(24): message : 'std' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(110,44): error C2065: 'endl': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(129,3): error C2065: 'm_data': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(142,8): error C2039: 'cout': 'std' のメンバーではありません
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\string(24): message : 'std' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(142,13): error C2065: 'cout': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(142,82): error C2039: 'endl': 'std' のメンバーではありません
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\string(24): message : 'std' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(142,86): error C2065: 'endl': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(167,17): error C2065: 'm_data': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(209,17): error C2065: 'm_data': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(275,17): error C2065: 'm_data': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(307,20): error C2065: 'm_pPlayer': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(308,17): error C2065: 'm_pPlayer': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(309,15): error C2065: 'm_pPlayer': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(310,18): error C2065: 'm_pPlayer': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(321,2): error C2065: 'm_pPlayer': 定義されていない識別子です。
+  MapChip.cpp
   Player.cpp
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(12,6): error C2061: 構文エラー: 識別子 'Player'
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(35,8): error C2143: 構文エラー: ';' が '*' の前にありません。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(35,8): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(35,19): error C2238: ';' の前に無効なトークンがあります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,7): error C2039: 'vector': 'std' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\predefined C++ types (compiler internal)(341): message : 'std' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,13): error C2143: 構文エラー: ';' が '<' の前にありません。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,13): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,36): error C2238: ';' の前に無効なトークンがあります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(21,32): error C2065: 'm_rect': 定義されていない識別子です。
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(23,30): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(103,13): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(171,15): error C2039: 'GetLeft': 'Player' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(9): message : 'Player' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(172,1): error C2270: 'GetLeft': メンバーでない関数が、メモリ モデル修飾子を伴って宣言されています。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(173,9): error C2065: 'm_pos': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(176,15): error C2039: 'GetTop': 'Player' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(9): message : 'Player' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(177,1): error C2270: 'GetTop': メンバーでない関数が、メモリ モデル修飾子を伴って宣言されています。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(178,9): error C2065: 'm_pos': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(181,15): error C2039: 'GetRight': 'Player' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(9): message : 'Player' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(182,1): error C2270: 'GetRight': メンバーでない関数が、メモリ モデル修飾子を伴って宣言されています。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(183,9): error C2065: 'm_pos': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(186,15): error C2039: 'GetBottom': 'Player' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(9): message : 'Player' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(187,1): error C2270: 'GetBottom': メンバーでない関数が、メモリ モデル修飾子を伴って宣言されています。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(188,9): error C2065: 'm_pos': 定義されていない識別子です。
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(201,53): warning C4390: ';': 制御が空の文が見つかりました。意図した記述でしょうか?
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(246,45): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(246,11): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
@@ -20,7 +114,10 @@ C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(245,52): w
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(245,18): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
   SceneGame.cpp
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  SceneTitle.cpp
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,7): error C2039: 'vector': 'std' のメンバーではありません
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stddef.h(23): message : 'std' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,13): error C2143: 構文エラー: ';' が '<' の前にありません。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,13): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(44,36): error C2238: ';' の前に無効なトークンがあります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(21,32): error C2065: 'm_rect': 定義されていない識別子です。
   コードを生成中...
-  ArrowCarry.vcxproj -> C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\x64\Debug\ArrowCarry.exe
