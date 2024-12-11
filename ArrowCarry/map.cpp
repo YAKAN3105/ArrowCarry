@@ -1,26 +1,23 @@
 #include "map.h"
 #include <DxLib.h>
-#include<vector>
+#include <vector>
 #include <cassert>
-#include<string>
+#include <string>
+#include <fstream>
 #include"Player.h"
 #include"game.h"
 
 
+namespace
+{
+	// マップチップの要素数
+	constexpr int kChipIndexX = 40;
+	constexpr int kChipIndexY = 32;
+}
+
 // 定数の定義
 namespace
 {
-	// マップチップ1つのサイズ
-	constexpr int kChipWidth = 32;
-	constexpr int kChipHeight = 32;
-
-
-	constexpr int kPartsNumX = 16; // パーツの選択範囲
-	constexpr int kPartsNumY = 16;
-
-	constexpr int kChipIndexX = 40;	// マップチップの要素数
-	constexpr int kChipIndexY = 32;
-
 	// マップに敷き詰めるチップの数
 	//constexpr int kChipNumX = Game::kScreenWidth / kChipWidth;
 	//constexpr int kChipNumY = Game::kScreenHeight / kChipHeight;
@@ -33,12 +30,10 @@ namespace
 
 // コンストラクタでメンバ変数の初期化を行う
 // コンストラクタ初期化子を使用して初期化する
-Map::Map(Player*playerPointer):
-	m_pPlayer(playerPointer),
+Map::Map():
 	m_handle(-1),
 	m_graphChipNumX(0),
-	m_graphChipNumY(0),
-	m_offsetPosY(kChipHeight* kChipIndexY - Game::kScreenHeight)
+	m_graphChipNumY(0)
 {
 }
 
@@ -97,7 +92,7 @@ void Map::Init()
 	if (!ifs)
 	{
 		//エラーメッセージを表示
-		std::cerr << "Error: file not opened." << std::endl;
+		assert(false && "Error: file not opened.");
 		//return 1;
 	}
 
@@ -107,7 +102,7 @@ void Map::Init()
 	ifs.seekg(0);
 
 	//サイズを表示
-	std::cout << "size: " << size << std::endl;
+	printfDx("size: %d\n", size);
 
 	//20バイト分の無駄なデータを読み飛ばす
 	//なぜか最初の20バイトが無駄なデータになっている(ごみ)
@@ -126,6 +121,9 @@ void Map::Init()
 		char tmp;
 		ifs.read(&tmp, sizeof(char));
 
+		auto mapchip = new MapChip;
+		mapchip->Init(tmp);
+
 		m_data.push_back(tmp);
 
 		size--;
@@ -139,7 +137,7 @@ void Map::Init()
 	//データを表示
 	for (int i = 0; i < data.size(); i++)
 	{
-		std::cout << "配列番号" << i << " : " << static_cast<int>(data[i]) << std::endl;
+		printfDx("配列番号%d:%d", i, static_cast<int>(data[i]));
 	}
 }
 
@@ -162,39 +160,7 @@ void Map::Draw()
 	{
 		for (int x = 0; x < kChipIndexX; x++)
 		{
-			// データから配置するチップを決定する
-			// 二重配列の場合でも、vector配列を先頭から順番に見ていくための処理
-			int chipNo = m_data[(y * kChipIndexX) + x];
-
-			if (chipNo < 0)
-			{
-				// continueは繰り返し文(for,while)の中で使用する命令
-				// continueが呼ばれたら以降の繰り返し処理は行わず次のループに移行する
-				continue;
-			}
-
-			// 0から始まる通し番号を
-			// 上から何個目、左から何個目なのか、という情報に変換する必要がある
-			// グラフィックに何個チップが含まれているか、という情報を使用して
-			// 計算で求める
-			int indexX = chipNo % kPartsNumX; // 左から何個目のチップか
-			int indexY = chipNo / kPartsNumY; // 上から何個目のチップか
-
-
-			// チップ番号から切り出し位置を計算する
-			int cutX = indexX * kChipWidth; // インデックスX番号を用いたマップチップの位置を示す変数
-			int cutY = indexY * kChipHeight; // インデックスY番号を用いたマップチップの位置を示す変数
-
-
-			 
-
-
-			DrawRectGraph
-			(x * kChipWidth,				// グラフィックを描画する座標
-				y * kChipHeight - m_offsetPosY,
-				cutX, cutY,					// 描画するグラフィック上の描画したい矩形の左上座標
-				kChipWidth, kChipHeight,	// 描画するグラフィックのサイズ
-				m_handle, true);			// 透過処理するかどうか
+			m_pMapChip[y * kChipIndexX + x]->Draw();
 		}
 	}
 
@@ -204,6 +170,8 @@ void Map::Draw()
 	{
 		for (int x = 0; x < kChipIndexX; x++)
 		{
+			m_pMapChip[y * kChipIndexX + x]->DebugDraw();
+
 			// データから配置するチップを決定する
 			// 二重配列の場合でも、vector配列を先頭から順番に見ていくための処理
 			int chipNo = m_data[(y * kChipIndexX) + x];
@@ -242,25 +210,6 @@ void Map::Draw()
 	}
 }
 
-int Map::GetLeft(int x)
-{
-	return x *kChipWidth;	// マップチップの左側の座標
-}
-
-int Map::GetTop(int y)
-{
-	return y* kChipHeight- m_offsetPosY;	// マップチップの
-}
-
-int Map::GetRight(int x)
-{
-	return x* kChipWidth + kChipWidth;
-}
-
-int Map::GetBottom(int y)
-{
-	return y* kChipHeight - kChipHeight - m_offsetPosY;
-}
 
 void Map::CheckHit()
 {
@@ -300,6 +249,26 @@ void Map::CheckHit()
 	{
 		printfDx("あたってない\n");
 	}
+}
+
+MapKind Map::GetKind(int x, int y)
+{
+	return m_pMapChip[y * kChipIndexX + x]->GetKind();
+}
+
+Rect Map::GetRect(int x, int y)
+{
+	return m_pMapChip[y * kChipIndexX + x]->GetRect();
+}
+
+int Map::GetChipIndexX()
+{
+	return kChipIndexX;
+}
+
+int Map::GetChipIndexY()
+{
+	return kChipIndexY;
 }
 
 bool Map::IsHit(int x, int y)

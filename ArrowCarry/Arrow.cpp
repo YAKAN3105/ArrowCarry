@@ -20,8 +20,7 @@ namespace
 
 }
 
-Arrow::Arrow(Player* playerPointer):
-	m_pPlayer(playerPointer),
+Arrow::Arrow():
 	m_handleLeftArrow(-1),
 	m_handleRightArrow(-1),
 	m_handleUpArrow(-1),
@@ -72,35 +71,26 @@ void Arrow::Draw()
 	Color = 0xffff00;
 	// –îˆó‚Ì“–‚½‚è”»’è
 #if _DEBUG
-	DrawBox(GetLeft(), GetTop(), GetRight(), GetBottom(), Color, false);
+	DrawBox(m_rect.GetLeft(), m_rect.GetTop(), m_rect.GetRight(), m_rect.GetBottom(), Color, false);
 #endif // DEBUG
 
 	DrawRotaGraph(static_cast<int> (m_pos.x), static_cast<int>(m_pos.y - kGraphHeight* 0.5f + 20),0.1f, 0,m_handleUpArrow, true);
-
-	DrawFormatString(0,0,0xffffff,"PlayerPos:%f,%f", m_pPlayer->GetLeft(), m_pPlayer->GetTop());
 }
 
-float Arrow::GetLeft()
+Vec2 Arrow::GetPower()
 {
-	return (m_pos.x - kHitBoxWidth);
+	if (m_dir == Dir::kUp)
+	{
+		
+	}
+	else if (m_dir == Dir::kLeft)
+	{
+
+	}
+	else if (m_dir == Dir::kRight)
+	{
+
+	}
+	return Vec2();
 }
 
-float Arrow::GetTop()
-{
-	return (m_pos.y - kHitBoxHeight);
-}
-
-float Arrow::GetRight()
-{
-	return (m_pos.x + kHitBoxWidth);
-}
-
-float Arrow::GetBottom()
-{
-	return m_pos.y;
-}
-
-void Arrow::OnPlayerHit()
-{
-	
-}

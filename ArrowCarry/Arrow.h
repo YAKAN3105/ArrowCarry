@@ -7,8 +7,16 @@ class Player;
 
 class Arrow
 {
+private:
+	enum class Dir
+	{
+		kUp,
+		kLeft,
+		kRight
+	};
+
 public:
-	Arrow(Player* playerPointer);
+	Arrow();
 	~Arrow();
 
 	void Init();
@@ -16,12 +24,15 @@ public:
 	void Update();
 	void Draw();
 
+	Vec2 GetPower();
+
+
 	Rect GetRect() const { return m_rect; }
 
 private:
 
 	
-	Player* m_pPlayer;
+	
 	Vec2 m_pos;
 	Rect m_rect;
 
@@ -33,6 +44,6 @@ private:
 
 	int m_isDitLeft;
 
-
+	Dir m_dir;
 };
 

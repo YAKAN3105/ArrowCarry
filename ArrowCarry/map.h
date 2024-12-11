@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include "MapChip.h"
 
 namespace
@@ -9,7 +10,7 @@ namespace
 class Map
 {
 public:
-	Map(Player* playerPointer);
+	Map();
 	~Map();
 
 	void Init();
@@ -17,11 +18,11 @@ public:
 	void Update();
 	void Draw();
 	
-	int GetLeft(int x);
-	int GetTop(int y);
-	int GetRight(int x);
-	int GetBottom(int y);
-	void CheckHit();
+
+	MapKind GetKind(int x, int y);
+	Rect GetRect(int x, int y);
+	int GetChipIndexX();
+	int GetChipIndexY();
 
 private:
 
@@ -31,8 +32,6 @@ private:
 	void ChangePlayerHitFlag();
 
 private:
-
-	Player* m_pPlayer;
 
 	// グラフィックのハンドル
 	int m_handle;
@@ -45,9 +44,7 @@ private:
 
 	int m_fileSize; // 外部ファイルの大きさを保存するための変数
 
-	int m_offsetPosY; // マップチップの座標Yの補完
 
-
-	
+	std::vector<MapChip*> m_pMapChip;
 };
 

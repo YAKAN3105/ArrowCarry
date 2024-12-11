@@ -21,13 +21,15 @@ public:
 	Rect GetRect() const { return m_rect; }
 
 	void IsHitArrow();
-	void ChangeHitMap();
+	
+	void OnArrow(Vec2 vec);
 
-	void CheckHitMap();
 	
 	// ‘¬“x‚ð0‚É‚·‚é
 	void InitVelocity(); 
 	void ChangePosMapHit();
+
+
 
 private:
 

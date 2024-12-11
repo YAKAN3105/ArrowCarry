@@ -16,7 +16,7 @@ SceneGame::SceneGame()
 {
 	m_pPlayer= new Player(m_pMap);
 	m_pArrow = new Arrow(m_pPlayer);
-	m_pMap = new Map(m_pPlayer);
+	m_pMap = new Map();
 }
 
 SceneGame::~SceneGame()
@@ -61,9 +61,35 @@ void SceneGame::Draw()
 
 void SceneGame::CheckHit()
 {
-	// プレイヤーと全マップチップとの当たり判定
+	for (int x = 0; x < m_pMap->GetChipIndexX(); x++)
+	{
+		for (int y = 0; y < m_pMap->GetChipIndexY(); y++)
+		{
+			// プレイヤーと全マップチップとの当たり判定
+			if (IsBoxHit(m_pPlayer->GetRect(), m_pMap->GetRect(x, y)))
+			{
+				const auto kind = m_pMap->GetKind(x, y);
+
+				if (kind == MapKind::kGoal)
+				{
+					// クリア処理
+					
+				}
+				else if (kind == MapKind::kChip)
+				{
+					// 押し出し処理
+
+				}
+
+			}
+		}
+	}
 	
 	// プレイヤーと全矢印との当たり判定
+	if(IsBoxHit(m_pPlayer->GetRect(),m_pArrow->GetRect()))
+	{
+		m_pPlayer
+	}
 	
 }
 

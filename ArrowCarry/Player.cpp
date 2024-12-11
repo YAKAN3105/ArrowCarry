@@ -168,45 +168,18 @@ void Player::AnimationUpdate()
 
 
 
-float Player::GetLeft() const
-{
-	return m_pos.x - kGraphWidth * 0.5f;
-}
 
-float Player::GetTop() const
-{
-	return m_pos.y - kGraphHeight;
-}
-
-float Player::GetRight() const
-{
-	return m_pos.x + kGraphWidth * 0.2f;
-}
-
-float Player::GetBottom() const
-{
-	return m_pos.y;
-}
 
 void Player::IsHitArrow()
 {
 	m_isJumpNow = true;
 }
 
-void Player::ChangeHitMap()
+void Player::OnArrow(Vec2 vec)
 {
-	if (GetLeft() > m_pMap->GetRight(32) &&
-		GetRight() < m_pMap->GetLeft(32) &&
-		GetTop() < m_pMap->
-		GetBottom(32) && GetBottom() < m_pMap->GetTop(32));
-	m_isMapHit = true;
+	m_velocity = vec;
 }
-void Player::CheckHitMap()
-{
-	// 全マップチップと判定を行う
 
-	// 当たっていた場合はChangePosMapHit()これを呼ぶ？
-}
 void Player::InitVelocity()
 {
 	Vec2 zero{0,0};
