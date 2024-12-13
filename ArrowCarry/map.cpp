@@ -273,10 +273,10 @@ int Map::GetChipIndexY()
 
 bool Map::IsHit(int x, int y)
 {
-	if ((GetLeft(x) < m_pPlayer->GetRight() &&
-		GetRight(x) > m_pPlayer->GetLeft() &&
-		GetTop(y) < m_pPlayer->GetBottom() &&
-		GetBottom(y) > m_pPlayer->GetTop()))
+	if ((GetRect(x,y) < m_pPlayer->GetRight() &&
+		GetRect(x,y) > m_pPlayer->GetLeft() &&
+		GetRect(x,y) < m_pPlayer->GetBottom() &&
+		GetRect(x,y) > m_pPlayer->GetTop()))
 	{
 		return true;
 	}

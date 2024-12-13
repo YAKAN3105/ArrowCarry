@@ -79,18 +79,22 @@ void Arrow::Draw()
 
 Vec2 Arrow::GetPower()
 {
-	if (m_dir == Dir::kUp)
+	Vec2 ans;
+	ans.x = 0;
+	ans.y = 0;
+	ans.y = 0;
+	if (m_dir == Dir::kUp)	// –îˆó‚ªã‚É—Í‚ğ‰Á‚¦‚é
 	{
-		
+		ans.y += 2;
 	}
-	else if (m_dir == Dir::kLeft)
+	else if (m_dir == Dir::kLeft)  // –îˆó‚ª¶•ûŒü‚É—Í‚ğ‰Á‚¦‚é
 	{
-
+		ans.x += 2;
 	}
-	else if (m_dir == Dir::kRight)
+	else if (m_dir == Dir::kRight)	// –îˆó‚ª‰E•ûŒü‚É—Í‚ğ‰Á‚¦‚é
 	{
-
+		ans.x -= 2;
 	}
-	return Vec2();
+	return ans;
 }
 

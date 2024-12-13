@@ -76,8 +76,7 @@ void Player::End()
 
 void Player::Update()
 { 
-	//ƒ}ƒbƒv‚Æ“–‚½‚Á‚Ä‚¢‚é‚©‚Ç‚¤‚©
-	CheckHitMap();
+	
 	//if (m_isMapHit)
 	//{
 	//	ChangePosMapHit();

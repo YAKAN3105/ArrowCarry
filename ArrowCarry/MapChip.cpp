@@ -54,3 +54,8 @@ void MapChip::Draw()
 	kChipWidth, kChipHeight,	// 描画するグラフィックのサイズ
 	m_handle, true);			// 透過処理するかどうか
 }
+
+bool MapChip::CheckIsHit(Rect rectA, Rect rectB)
+{
+	return false;
+}

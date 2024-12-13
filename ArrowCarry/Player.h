@@ -64,6 +64,8 @@ private:
 
 	int m_playerNowPos;
 
+	Rect m_rect;
+
 	
 
 };
