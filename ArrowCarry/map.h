@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "MapChip.h"
+#include <memory>
 
 namespace
 {
@@ -46,6 +47,7 @@ private:
 
 	int m_fileSize; // 外部ファイルの大きさを保存するための変数
 
+	std::shared_ptr<Player*> m_pPlayer;
 
 	std::vector<MapChip*> m_pMapChip;
 };
