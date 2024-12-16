@@ -73,7 +73,8 @@ void SceneGame::CheckHit()
 				if (kind == MapKind::kGoal)
 				{
 					// クリア処理
-					
+					ChangeScene(new SceneResult); // ResultSceneに引っ越し
+					return;
 				}
 				else if (kind == MapKind::kChip)
 				{
@@ -88,7 +89,7 @@ void SceneGame::CheckHit()
 	// プレイヤーと全矢印との当たり判定
 	if(IsBoxHit(m_pPlayer->GetRect(),m_pArrow->GetRect()))
 	{
-		m_pPlayer
+		
 	}
 	
 }

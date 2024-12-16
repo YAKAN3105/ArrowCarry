@@ -42,6 +42,8 @@ private:
 
 	std::vector<unsigned __int8>m_data;
 
+	
+
 	int m_fileSize; // 外部ファイルの大きさを保存するための変数
 
 

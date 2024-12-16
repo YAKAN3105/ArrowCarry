@@ -29,6 +29,8 @@ private:
 
 	int m_srcX;
 	int m_srcY;
+	int m_handle;
+	int m_offsetPosY;
 
 	MapKind m_kind;
 };
