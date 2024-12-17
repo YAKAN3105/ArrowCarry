@@ -8,27 +8,26 @@ C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(74,24): wa
 C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(4864,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   Map.cpp
 C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(4864,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(47,39): error C2440: '=': 'std::shared_ptr<Player *>' から 'Player *' に変換できません。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(47,39): message : この変換を実行可能なユーザー定義変換演算子がないか、または演算子を呼び出せません。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(111,11): warning C4244: '初期化中': 'std::streamoff' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(182,37): error C2039: 'DebugDraw': 'MapChip' のメンバーではありません
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.h(12,7): message : 'MapChip' の宣言を確認してください
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(208,4): error C2065: 'm_offsetPosY': 定義されていない識別子です。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(215,22): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(214,21): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(213,19): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(212,20): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(223,11): error C2039: 'CheckHit': 'Map' のメンバーではありません
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(7,7): message : 'Map' の宣言を確認してください
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(264,13): error C2039: 'ChangeHitMap': 'Player' のメンバーではありません
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(9,7): message : 'Player' の宣言を確認してください
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(110,11): warning C4244: '初期化中': 'std::streamoff' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(133,29): error C2512: 'MapChip': クラス、構造体、共用体に既定のコンストラクターがありません。
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(134,10): error C3536: 'mapchip': 初期化前に使用することはできません
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(136,3): error C2065: 'm_data': 定義されていない識別子です。
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(185,17): error C2065: 'm_data': 定義されていない識別子です。
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(214,22): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(213,21): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(212,19): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(211,20): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
   MapChip.cpp
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.h(39,7): error C2039: 'vector': 'std' のメンバーではありません
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\memory(28,1): message : 'std' の宣言を確認してください
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.h(39,13): error C2143: 構文エラー: ';' が '<' の前にありません。
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.h(39,13): error C4430: 型指定子がありません - int と仮定しました。メモ: C++ は int を既定値としてサポートしていません
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.h(39,36): error C2238: ';' の前に無効なトークンがあります。
 C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(4864,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(48,24): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(47,11): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(69,17): error C2065: 'm_data': 定義されていない識別子です。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(80,9): error C3861: 'IsHit': 識別子が見つかりませんでした
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(87,4): error C3861: 'ChangePlayerHitFlag': 識別子が見つかりませんでした
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(49,24): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(48,11): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(71,17): error C2065: 'm_data': 定義されていない識別子です。
+C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(89,4): error C3861: 'ChangePlayerHitFlag': 識別子が見つかりませんでした
   Player.cpp
 C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(4864,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
 C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(23,30): warning C4244: '=': 'const float' から 'int' への変換です。データが失われる可能性があります。
@@ -39,12 +38,6 @@ C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(217,52): 
 C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Player.cpp(217,18): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
   SceneGame.cpp
 C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(4864,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\SceneGame.cpp(18,22): error C2665: 'Arrow::Arrow': オーバーロードされた関数ですべての引数の型を変換できませんでした
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.h(48,1): message : 'Arrow::Arrow(const Arrow &)' の可能性があります
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\SceneGame.cpp(18,22): message : 'Arrow::Arrow(const Arrow &)': 引数 1 を 'Player *' から 'const Arrow &' へ変換できません。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\SceneGame.cpp(18,23): message : 理由: 'Player *' から 'const Arrow' へは変換できません。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\SceneGame.cpp(18,23): message : コンストラクターはソース型を持てません、またはコンストラクターのオーバーロードの解決があいまいです。
-C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\ArrowCarry\SceneGame.cpp(18,22): message : 引数リスト '(Player *)' を一致させようとしているとき
   SceneResult.cpp
 C:\Users\SuginoYusei\Documents\GitHub\ArrowCarry\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(4864,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   SceneTitle.cpp

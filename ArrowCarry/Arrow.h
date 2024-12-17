@@ -16,7 +16,7 @@ private:
 	};
 
 public:
-	Arrow();
+	Arrow(Player* m_pPlayer);
 	~Arrow();
 
 	void Init();

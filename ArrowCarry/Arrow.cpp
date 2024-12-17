@@ -20,7 +20,7 @@ namespace
 
 }
 
-Arrow::Arrow():
+Arrow::Arrow(Player* m_pPlayer):
 	m_handleLeftArrow(-1),
 	m_handleRightArrow(-1),
 	m_handleUpArrow(-1),

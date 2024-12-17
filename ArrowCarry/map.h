@@ -28,7 +28,7 @@ public:
 
 private:
 
-	bool IsHit(int x, int y);
+	
 
 	// マップとプレイヤーが当たったことを伝える
 	void ChangePlayerHitFlag();
@@ -42,11 +42,12 @@ private:
 	int m_graphChipNumX;
 	int m_graphChipNumY;
 
-	std::vector<unsigned __int8>m_data;
-
 	
 
+	int m_offsetPosY;
+
 	int m_fileSize; // 外部ファイルの大きさを保存するための変数
+
 
 	Player* m_pPlayer;
 

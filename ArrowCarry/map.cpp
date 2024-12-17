@@ -44,7 +44,6 @@ Map::Map():
 	m_graphChipNumX(0),
 	m_graphChipNumY(0)
 {
-	m_pPlayer = std::make_shared<Player*>();
 }
 
 Map::~Map()
@@ -131,7 +130,7 @@ void Map::Init()
 		char tmp;
 		ifs.read(&tmp, sizeof(char));
 
-		auto mapchip = new MapChip;
+		auto mapchip = new MapChip;	
 		mapchip->Init(tmp);
 
 		m_data.push_back(tmp);
@@ -220,10 +219,7 @@ void Map::Draw()
 }
 
 
-void Map::CheckHit()
-{
-	
-}
+
 
 MapKind Map::GetKind(int x, int y)
 {
@@ -245,21 +241,12 @@ int Map::GetChipIndexY()
 	return kChipIndexY;
 }
 
-bool Map::IsHit(int x, int y)
-{
-	if ((GetRect(x,y).GetLeft() < m_pPlayer->GetRect().GetRight() &&
-		GetRect(x,y).GetRight() > m_pPlayer->GetRect().GetLeft() &&
-		GetRect(x,y).GetTop() < m_pPlayer->GetRect().GetBottom() &&
-		GetRect(x,y).GetBottom() > m_pPlayer->GetRect().GetTop()))
-	{
-		return true;
-	}
-	return false;
-}
+
+
 
 void Map::ChangePlayerHitFlag()
 {
 	printfDx("あたってるー\n");
 	// プレイヤーに当たったことを伝える
-	m_pPlayer->ChangeHitMap();
+	//m_pPlayer->ChangeHitMap();
 }

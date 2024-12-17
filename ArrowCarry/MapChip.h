@@ -2,6 +2,8 @@
 #include"Rect.h"
 #include<memory>
 
+class Player;
+
 enum class MapKind
 {
 	kBack,
@@ -12,7 +14,7 @@ enum class MapKind
 class MapChip
 {
 public:
-	MapChip();
+	MapChip(Player* m_pPlayer);
 	~MapChip();
 
 	void Init(int no);
@@ -24,6 +26,8 @@ public:
 
 	const Rect GetRect() const { return m_rect; } // マップチップの判定
 
+	void DebugDraw();
+
 private:
 	Vec2 m_pos;
 	Rect m_rect;
@@ -31,7 +35,12 @@ private:
 	int m_srcX;
 	int m_srcY;
 	int m_handle;
-	int m_offsetPosY;
+
+	std::vector<unsigned __int8>m_data;
+
+	bool IsHit(int x, int y);
+	
+	Player* m_pPlayer;
 
 	MapKind m_kind;
 };

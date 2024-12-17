@@ -3,6 +3,7 @@
 #include "game.h"
 #include "Map.h"
 #include <vector>
+#include "Player.h"
 
 namespace
 {
@@ -17,7 +18,7 @@ namespace
 	constexpr int kOffsetY = kChipHeight * kChipIndexY - Game::kScreenHeight;
 }
 
-MapChip::MapChip():
+MapChip::MapChip(Player* m_pPlayer):
 m_handle(-1)
 {
 }
@@ -55,6 +56,7 @@ void MapChip::Draw()
 
 	
 }
+
 
 bool MapChip::CheckIsHit(Rect rectA, Rect rectB)
 {
@@ -94,5 +96,23 @@ bool MapChip::CheckIsHit(Rect rectA, Rect rectB)
 	{
 		printfDx("‚ ‚½‚Á‚Ä‚È‚¢\n");
 	}
+	return false;
+}
+
+void MapChip::DebugDraw()
+{
+}
+
+bool MapChip::IsHit(int x, int y)
+{
+	if ((GetRect().GetLeft() < m_pPlayer->GetRect().GetRight() &&
+		GetRect().GetRight() > m_pPlayer->GetRect().GetLeft() &&
+		GetRect().GetTop() < m_pPlayer->GetRect().GetBottom() &&
+		GetRect().GetBottom() > m_pPlayer->GetRect().GetTop()))
+	{
+		return true;
+	}
+	return false;
+
 	return false;
 }
