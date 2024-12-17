@@ -8,6 +8,7 @@ namespace
 	//const char* const FILE_NAME = "data/MapChip1.fmf";
 }
 
+class Player;
 class Map
 {
 public:
@@ -46,8 +47,6 @@ private:
 	
 
 	int m_fileSize; // 外部ファイルの大きさを保存するための変数
-
-	std::shared_ptr<Player*> m_pPlayer;
 
 	std::vector<MapChip*> m_pMapChip;
 };

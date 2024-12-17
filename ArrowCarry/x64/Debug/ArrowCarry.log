@@ -8,26 +8,25 @@ C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Arrow.cpp(74,24): war
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(50,18): error C2065: 'Player': 定義されていない識別子です。
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(50,25): error C2059: 構文エラー: '>'
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(102,11): warning C4244: '初期化中': 'std::streamoff' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(161,11): error C2039: 'CheckHit': 'Map' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(111,11): warning C4244: '初期化中': 'std::streamoff' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(182,37): error C2039: 'DebugDraw': 'MapChip' のメンバーではありません
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.h(12): message : 'MapChip' の宣言を確認してください
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(208,4): error C2065: 'm_offsetPosY': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(215,22): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(214,21): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(213,19): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(212,20): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.cpp(223,11): error C2039: 'CheckHit': 'Map' のメンバーではありません
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Player.h(7): message : 'Map' の宣言を確認してください
   MapChip.cpp
 C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(50,18): error C2065: 'Player': 定義されていない識別子です。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(50,25): error C2059: 構文エラー: '>'
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(51,24): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(50,11): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(63,4): error C2065: 'm_pMapChip': 定義されていない識別子です。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(73,4): error C2065: 'm_pMapChip': 定義されていない識別子です。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(77,17): error C2065: 'm_data': 定義されていない識別子です。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(101,26): error C2065: 'm_pMapChip': 定義されていない識別子です。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(101,24): error C2530: 'mapRect': 参照が初期化されずに宣言されています。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(103,12): error C3536: 'mapRect': 初期化前に使用することはできません
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(102,4): error C2660: 'DxLib::DrawBox': 関数に 3 個の引数を指定できません。
-C:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(2872,14): message : 'DxLib::DrawBox' の宣言を確認してください
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(123,17): error C2065: 'm_data': 定義されていない識別子です。
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(134,9): error C3861: 'IsHit': 識別子が見つかりませんでした
-C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(141,4): error C3861: 'ChangePlayerHitFlag': 識別子が見つかりませんでした
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.h(50,18): error C2065: 'Player': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\Map.h(50,25): error C2059: 構文エラー: '>'
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(48,24): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(47,11): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(69,17): error C2065: 'm_data': 定義されていない識別子です。
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(80,9): error C3861: 'IsHit': 識別子が見つかりませんでした
+C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\MapChip.cpp(87,4): error C3861: 'ChangePlayerHitFlag': 識別子が見つかりませんでした
   Player.cpp
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(50,18): error C2065: 'Player': 定義されていない識別子です。
 C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\map.h(50,25): error C2059: 構文エラー: '>'

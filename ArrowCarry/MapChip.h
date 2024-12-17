@@ -1,5 +1,6 @@
 #pragma once
 #include"Rect.h"
+#include<memory>
 
 enum class MapKind
 {
