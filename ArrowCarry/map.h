@@ -48,6 +48,8 @@ private:
 
 	int m_fileSize; // 外部ファイルの大きさを保存するための変数
 
+	Player* m_pPlayer;
+
 	std::vector<MapChip*> m_pMapChip;
 };
 

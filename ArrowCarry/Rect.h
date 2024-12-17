@@ -1,7 +1,7 @@
 #pragma once
 #include "Vec2.h"
 
-class Rect
+class Rect	// 矩形（四角）の情報を取得してくれている
 {
 public:
 	/// <summary>

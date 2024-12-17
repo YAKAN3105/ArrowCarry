@@ -247,10 +247,10 @@ int Map::GetChipIndexY()
 
 bool Map::IsHit(int x, int y)
 {
-	if ((GetRect(x,y) < m_pPlayer->GetRight() &&
-		GetRect(x,y) > m_pPlayer->GetLeft() &&
-		GetRect(x,y) < m_pPlayer->GetBottom() &&
-		GetRect(x,y) > m_pPlayer->GetTop()))
+	if ((GetRect(x,y).GetLeft() < m_pPlayer->GetRect().GetRight() &&
+		GetRect(x,y).GetRight() > m_pPlayer->GetRect().GetLeft() &&
+		GetRect(x,y).GetTop() < m_pPlayer->GetRect().GetBottom() &&
+		GetRect(x,y).GetBottom() > m_pPlayer->GetRect().GetTop()))
 	{
 		return true;
 	}
