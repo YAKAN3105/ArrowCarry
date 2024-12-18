@@ -32,8 +32,7 @@ namespace
 
 }
 
-Player::Player(Map* mapPointer) :
-	m_pMap(mapPointer),
+Player::Player():
 	m_handleIdle(-1),
 	m_handleRun(-1),
 	m_animFrame(0),

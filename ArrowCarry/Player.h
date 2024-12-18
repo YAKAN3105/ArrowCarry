@@ -9,7 +9,7 @@ class Map;
 class Player
 {
 public:
-	Player(Map* mapPointer);
+	Player();
 	~Player();
 
 	void Init();
@@ -33,7 +33,6 @@ public:
 
 private:
 
-	Map* m_pMap;
 	Vec2  m_pos;
 	Vec2 m_backPos;
 	Vec2 m_velocity;

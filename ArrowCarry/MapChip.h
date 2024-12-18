@@ -2,7 +2,6 @@
 #include"Rect.h"
 #include<memory>
 
-class Player;
 
 enum class MapKind
 {
@@ -14,13 +13,13 @@ enum class MapKind
 class MapChip
 {
 public:
-	MapChip(Player* m_pPlayer);
+	MapChip();
 	~MapChip();
 
 	void Init(int no);
-	void Draw();
+	void Draw(int m_handle, int x, int y);
 
-	bool CheckIsHit(Rect rectA,Rect rectB);
+//	bool CheckIsHit(Rect rectA,Rect rectB);
 
 	const MapKind GetKind() const { return m_kind; } // マップチップの種類
 
@@ -36,11 +35,10 @@ private:
 	int m_srcY;
 	int m_handle;
 
-	std::vector<unsigned __int8>m_data;
+	
 
 	bool IsHit(int x, int y);
-	
-	Player* m_pPlayer;
+
 
 	MapKind m_kind;
 };

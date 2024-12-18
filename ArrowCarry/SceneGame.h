@@ -18,8 +18,17 @@ public:
 
 
 private:
+	/// <summary>
+	/// 
+	/// </summary>
 	void CheckHit();
-	// rect1がプレイヤーrect2が矢印とかマップチップ
+
+	/// <summary>
+	/// rect1がプレイヤーrect2が矢印とかマップチップ
+	/// </summary>
+	/// <param name="rect1">当たり判定1</param>
+	/// <param name="rect2">当たり判定2</param>
+	/// <returns>あたったかどうか</returns>
 	bool IsBoxHit(const Rect& rect1, const Rect& rect2);
 	 
 	// 初期化

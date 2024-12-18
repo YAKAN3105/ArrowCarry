@@ -6,6 +6,7 @@
 #include "Arrow.h"
 #include "map.h"
 #include "Rect.h"
+#include "game.h"
 
 namespace
 {
@@ -14,8 +15,8 @@ namespace
 
 SceneGame::SceneGame()
 {
-	m_pPlayer= new Player(m_pMap);
-	m_pArrow = new Arrow(m_pPlayer);
+	m_pPlayer= new Player();
+	m_pArrow = new Arrow();
 	m_pMap = new Map();
 }
 
@@ -53,10 +54,12 @@ void SceneGame::Update()
 
 void SceneGame::Draw()
 {
+	// 画面全体を紫で塗りつぶす
+	//DrawBox(0, 0, Game::kScreenWidth, Game::kScreenHeight, GetColor(206, 128, 255), true);
 	m_pMap->Draw();
-	m_pArrow->Draw();
-	m_pPlayer->Draw();
-	DrawFormatString(0, 0, 0xffffff, "SceneGame");// いまゲームシーンにいるよー
+	//m_pArrow->Draw();
+	//m_pPlayer->Draw();
+	//DrawFormatString(0, 0, 0xffffff, "SceneGame");// いまゲームシーンにいるよー
 }
 
 void SceneGame::CheckHit()
@@ -68,7 +71,8 @@ void SceneGame::CheckHit()
 			// プレイヤーと全マップチップとの当たり判定
 			if (IsBoxHit(m_pPlayer->GetRect(), m_pMap->GetRect(x, y)))
 			{
-				const auto kind = m_pMap->GetKind(x, y);
+				// どこのマップの種類(Kind)なのかを呼ぶ
+				const auto kind = m_pMap->GetKind(x, y); 
 
 				if (kind == MapKind::kGoal)
 				{

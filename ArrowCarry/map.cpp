@@ -127,11 +127,13 @@ void Map::Init()
 
 	while (true)
 	{
-		char tmp;
-		ifs.read(&tmp, sizeof(char));
+		unsigned __int8 tmp;
+		ifs.read((char*)&tmp, sizeof(char));
 
-		auto mapchip = new MapChip;	
+		MapChip* mapchip = new MapChip;	
 		mapchip->Init(tmp);
+
+		m_pMapChip.push_back(mapchip);
 
 		m_data.push_back(tmp);
 
@@ -166,11 +168,11 @@ void Map::Draw()
 	{
 		for (int x = 0; x < kChipIndexX; x++)
 		{
-			m_pMapChip[y * kChipIndexX + x]->Draw();
+			m_pMapChip[y * kChipIndexX + x]->Draw(m_handle, x * 32, y * 32);
 		}
 	}
 
-
+	//DrawGraph(0, 0, m_handle, true);
 
 
 	//マップチップ当たり判定用の描画

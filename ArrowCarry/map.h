@@ -8,7 +8,6 @@ namespace
 	//const char* const FILE_NAME = "data/MapChip1.fmf";
 }
 
-class Player;
 class Map
 {
 public:
@@ -42,14 +41,14 @@ private:
 	int m_graphChipNumX;
 	int m_graphChipNumY;
 
-	
+	std::vector<unsigned __int8>m_data;
+
+	int m_mapchip;
 
 	int m_offsetPosY;
 
 	int m_fileSize; // 外部ファイルの大きさを保存するための変数
 
-
-	Player* m_pPlayer;
 
 	std::vector<MapChip*> m_pMapChip;
 };
