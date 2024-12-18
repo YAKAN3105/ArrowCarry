@@ -1,8 +1,0 @@
-﻿  Arrow.cpp
-c:\DxLib_VC\プロジェクトに追加すべきファイル_VC用\DxLib.h(3964,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  コード生成しています。
-  0 of 545 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  コード生成が終了しました。
-  ArrowCarry.vcxproj -> C:\Users\fko2447040\Documents\GitHub\ArrowCarry\ArrowCarry\x64\Release\ArrowCarry.exe
