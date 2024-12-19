@@ -21,7 +21,7 @@ private:
 	/// <summary>
 	/// 
 	/// </summary>
-	void CheckHit();
+	void CheckMapHit();
 
 	/// <summary>
 	/// rect1がプレイヤーrect2が矢印とかマップチップ

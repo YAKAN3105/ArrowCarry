@@ -37,7 +37,7 @@ void SceneGame::Update()
 	m_pArrow->Update();
 	m_pMap->Update();
 
-	CheckHit();
+	CheckMapHit();
 
 	//m_pMap->CheckHit();
 	//int i = 0;
@@ -55,14 +55,14 @@ void SceneGame::Update()
 void SceneGame::Draw()
 {
 	// 画面全体を紫で塗りつぶす
-	//DrawBox(0, 0, Game::kScreenWidth, Game::kScreenHeight, GetColor(206, 128, 255), true);
+	DrawBox(0, 0, Game::kScreenWidth, Game::kScreenHeight, GetColor(206, 128, 255), true);
 	m_pMap->Draw();
-	//m_pArrow->Draw();
-	//m_pPlayer->Draw();
-	//DrawFormatString(0, 0, 0xffffff, "SceneGame");// いまゲームシーンにいるよー
+	m_pArrow->Draw();
+	m_pPlayer->Draw();
+	DrawFormatString(0, 0, 0xffffff, "SceneGame");// いまゲームシーンにいるよー
 }
 
-void SceneGame::CheckHit()
+void SceneGame::CheckMapHit()
 {
 	for (int x = 0; x < m_pMap->GetChipIndexX(); x++)
 	{
@@ -88,12 +88,6 @@ void SceneGame::CheckHit()
 
 			}
 		}
-	}
-	
-	// プレイヤーと全矢印との当たり判定
-	if(IsBoxHit(m_pPlayer->GetRect(),m_pArrow->GetRect()))
-	{
-		
 	}
 	
 }

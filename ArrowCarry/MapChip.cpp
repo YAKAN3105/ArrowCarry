@@ -53,8 +53,12 @@ void MapChip::Draw(int m_handle, int x, int y)
 	kChipWidth, kChipHeight,	// 描画するグラフィックのサイズ
 	m_handle, true);			// 透過処理するかどうか
 	
+#if _DEBUG
 	DrawBox(x, y, x * kChipWidth, y * kChipHeight,
 		0xff0000, false);
+#endif // _DEBUG
+
+	
 }
 
 

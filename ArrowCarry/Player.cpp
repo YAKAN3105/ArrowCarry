@@ -93,7 +93,6 @@ void Player::Update()
 	if (CheckHitKey(KEY_INPUT_SPACE))
 	{
 		m_isRun = true;
-		
 	}
 	else if (CheckHitKey(KEY_INPUT_0))
 	{
@@ -171,6 +170,7 @@ void Player::AnimationUpdate()
 void Player::IsHitArrow()
 {
 	m_isJumpNow = true;
+
 }
 
 void Player::OnArrow(Vec2 vec)

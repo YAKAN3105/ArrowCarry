@@ -5,15 +5,16 @@
 
 class Player;
 
+enum class ArrowDir
+{
+	kUp,
+	kLeft,
+	kRight
+};
+
 class Arrow
 {
-private:
-	enum class Dir
-	{
-		kUp,
-		kLeft,
-		kRight
-	};
+	
 
 public:
 	Arrow();
@@ -27,11 +28,13 @@ public:
 	Vec2 GetPower();
 
 
-	Rect GetRect() const { return m_rect; }
+
+	Rect GetRect() const { return m_rect; }	// Arrow(矩形)の当たり判定
 
 private:
 
-	
+	// プレイヤーとArrowがあたったときの処理
+	bool IsHitArrow();
 	
 	Vec2 m_pos;
 	Rect m_rect;
@@ -44,6 +47,7 @@ private:
 
 	int m_isDitLeft;
 
-	Dir m_dir;
+	ArrowDir m_dir;
+	Player* m_pPlayer;
 };
 

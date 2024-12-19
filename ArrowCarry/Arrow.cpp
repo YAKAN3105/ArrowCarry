@@ -83,18 +83,27 @@ Vec2 Arrow::GetPower()
 	ans.x = 0;
 	ans.y = 0;
 	ans.y = 0;
-	if (m_dir == Dir::kUp)	// –îˆó‚ªã‚É—Í‚ð‰Á‚¦‚é
+	if (m_dir == ArrowDir::kUp)	// –îˆó‚ªã‚É—Í‚ð‰Á‚¦‚é
 	{
 		ans.y += 2;
 	}
-	else if (m_dir == Dir::kLeft)  // –îˆó‚ª¶•ûŒü‚É—Í‚ð‰Á‚¦‚é
+	else if (m_dir == ArrowDir::kLeft)  // –îˆó‚ª¶•ûŒü‚É—Í‚ð‰Á‚¦‚é
 	{
 		ans.x += 2;
 	}
-	else if (m_dir == Dir::kRight)	// –îˆó‚ª‰E•ûŒü‚É—Í‚ð‰Á‚¦‚é
+	else if (m_dir == ArrowDir::kRight)	// –îˆó‚ª‰E•ûŒü‚É—Í‚ð‰Á‚¦‚é
 	{
 		ans.x -= 2;
 	}
 	return ans;
+}
+
+bool Arrow::IsHitArrow()
+{
+	if (m_pPlayer->GetRect().GetRight() < m_rect.GetLeft())
+	{
+		return true;
+	}
+	return false;
 }
 

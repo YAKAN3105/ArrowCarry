@@ -168,7 +168,7 @@ void Map::Draw()
 	{
 		for (int x = 0; x < kChipIndexX; x++)
 		{
-			m_pMapChip[y * kChipIndexX + x]->Draw(m_handle, x * 32, y * 32);
+			m_pMapChip[y * kChipIndexX + x]->Draw(m_handle, x, y);
 		}
 	}
 
