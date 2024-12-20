@@ -93,6 +93,7 @@ void Player::Update()
 	if (CheckHitKey(KEY_INPUT_SPACE))
 	{
 		m_isRun = true;
+		m_pos.x += m_speed;
 	}
 	else if (CheckHitKey(KEY_INPUT_0))
 	{

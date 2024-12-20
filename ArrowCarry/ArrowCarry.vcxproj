@@ -152,6 +152,7 @@
     <ClInclude Include="Arrow.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="Map1.h" />
     <ClInclude Include="MapChip.h" />
     <ClInclude Include="MyKeyInput.h" />
     <ClInclude Include="Player.h" />

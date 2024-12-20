@@ -41,7 +41,7 @@ private:
 	int m_graphChipNumX;
 	int m_graphChipNumY;
 
-	std::vector<unsigned __int8>m_data;
+	std::vector<unsigned __int8>m_mapChipData;
 
 	int m_mapchip;
 

@@ -27,7 +27,7 @@ MapChip::~MapChip()
 {
 }
 
-void MapChip::Init(int no)
+void MapChip::Init(int no, float x, float y, float width, float height)
 {
 	// 0から始まる通し番号を
 	// 上から何個目、左から何個目なのか、という情報に変換する必要がある
@@ -35,6 +35,7 @@ void MapChip::Init(int no)
 	// 計算で求める
 	m_srcX = no % 16;
 	m_srcY = no / 16;
+	m_rect.Init(x, y, width, height);
 }
 
 void MapChip::Draw(int m_handle, int x, int y)
@@ -54,8 +55,8 @@ void MapChip::Draw(int m_handle, int x, int y)
 	m_handle, true);			// 透過処理するかどうか
 	
 #if _DEBUG
-	DrawBox(x, y, x * kChipWidth, y * kChipHeight,
-		0xff0000, false);
+	//DrawBox(x, y, x * kChipWidth, y * kChipHeight,
+		//0xff0000, false);
 #endif // _DEBUG
 
 	

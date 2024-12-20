@@ -16,7 +16,7 @@ public:
 	MapChip();
 	~MapChip();
 
-	void Init(int no);
+	void Init(int no,float x, float y, float width, float height);
 	void Draw(int m_handle, int x, int y);
 
 //	bool CheckIsHit(Rect rectA,Rect rectB);
