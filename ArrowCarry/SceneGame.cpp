@@ -62,35 +62,35 @@ void SceneGame::Draw()
 	DrawFormatString(0, 0, 0xffffff, "SceneGame");// いまゲームシーンにいるよー
 }
 
-void SceneGame::CheckMapHit()
-{
-	for (int x = 0; x < m_pMap->GetChipIndexX(); x++)
-	{
-		for (int y = 0; y < m_pMap->GetChipIndexY(); y++)
-		{
-			// プレイヤーと全マップチップとの当たり判定
-			if (IsBoxHit(m_pPlayer->GetRect(), m_pMap->GetRect(x, y)))
-			{
-				// どこのマップの種類(Kind)なのかを呼ぶ
-				const auto kind = m_pMap->GetKind(x, y); 
-
-				if (kind == MapKind::kGoal)
-				{
-					// クリア処理
-					ChangeScene(new SceneResult); // ResultSceneに引っ越し
-					return;
-				}
-				else if (kind == MapKind::kChip)
-				{
-					// 押し出し処理
-
-				}
-
-			}
-		}
-	}
-	
-}
+//void SceneGame::CheckMapHit()
+//{
+//	for (int x = 0; x < m_pMap->GetChipIndexX(); x++)
+//	{
+//		for (int y = 0; y < m_pMap->GetChipIndexY(); y++)
+//		{
+//			// プレイヤーと全マップチップとの当たり判定
+//			if (IsBoxHit(m_pPlayer->GetRect(), m_pMap->GetRect(x, y)))
+//			{
+//				// どこのマップの種類(Kind)なのかを呼ぶ
+//				const auto kind = m_pMap->GetKind(x, y); 
+//
+//				if (kind == MapKind::kGoal)
+//				{
+//					// クリア処理
+//					ChangeScene(new SceneResult); // ResultSceneに引っ越し
+//					return;
+//				}
+//				else if (kind == MapKind::kChip)
+//				{
+//					// 押し出し処理
+//
+//				}
+//
+//			}
+//		}
+//	}
+//	
+//}
 
 bool SceneGame::IsBoxHit(const Rect& rect1, const Rect& rect2)
 {

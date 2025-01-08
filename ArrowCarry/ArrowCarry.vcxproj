@@ -142,7 +142,6 @@
     <ClCompile Include="Arrow.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map.cpp" />
-    <ClCompile Include="MapChip.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SceneGame.cpp" />
     <ClCompile Include="SceneResult.cpp" />
@@ -152,8 +151,6 @@
     <ClInclude Include="Arrow.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="Map.h" />
-    <ClInclude Include="Map1.h" />
-    <ClInclude Include="MapChip.h" />
     <ClInclude Include="MyKeyInput.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Rect.h" />
