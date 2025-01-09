@@ -1,4 +1,7 @@
 #pragma once
+
+class Map;
+
 class SceneBase
 {
 public:

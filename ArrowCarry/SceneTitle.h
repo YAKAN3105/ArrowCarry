@@ -6,9 +6,9 @@ public:
 	SceneTitle();
 	~SceneTitle();
 
-	void Init();
-	void Update();
-	void Draw();
+	void Init()override;
+	void Update()override;
+	void Draw()override;
 private:
 
 	// グラフィックのハンドル

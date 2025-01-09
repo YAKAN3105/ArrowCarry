@@ -37,7 +37,6 @@ void SceneGame::Update()
 	m_pArrow->Update();
 	m_pMap->Update();
 
-	CheckMapHit();
 
 	//m_pMap->CheckHit();
 	//int i = 0;

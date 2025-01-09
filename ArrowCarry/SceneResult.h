@@ -6,8 +6,8 @@ public:
 	SceneResult();
 	~SceneResult();
 
-	void Init();
-	void Update();
-	void Draw();
+	void Init()override;
+	void Update()override;
+	void Draw()override;
 };
 

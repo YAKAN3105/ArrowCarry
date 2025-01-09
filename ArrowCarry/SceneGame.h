@@ -12,16 +12,16 @@ public:
 	SceneGame();
 	virtual ~SceneGame();
 
-	virtual void Init() override;
-	virtual void Update() override;
-	virtual void Draw() override;
+	void Init() override;
+	void Update() override;
+	void Draw() override;
 
 
 private:
 	/// <summary>
 	/// 
 	/// </summary>
-	void CheckMapHit();
+	
 
 	/// <summary>
 	/// rect1がプレイヤーrect2が矢印とかマップチップ
