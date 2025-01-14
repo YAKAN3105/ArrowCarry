@@ -1,6 +1,8 @@
 #pragma once
 #include "Rect.h"
 #include "Vec2.h"
+
+class Map;
 class MapChip
 {
 public:

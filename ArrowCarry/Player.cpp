@@ -90,10 +90,11 @@ void Player::Update()
 	m_pos = m_pos + m_velocity;
 
 	//キー入力の確認
+	// スペースキーを押したらキャラクターが走るようにする
 	if (CheckHitKey(KEY_INPUT_SPACE))
 	{
 		m_isRun = true;
-		m_pos.x += m_speed;
+		m_pos.x = m_speed;
 	}
 	else if (CheckHitKey(KEY_INPUT_0))
 	{
@@ -209,12 +210,13 @@ void Player::Draw()
 		useHandle = m_handleRun;
 	}
 
+	// 描画と当たり判定をつける
 	DrawRectGraph(static_cast<int>(m_pos.x - kGraphWidth *0.4f), static_cast<int>(m_pos.y - kGraphHeight * 0.5f),
 		animNo * kGraphWidth, 0, kGraphWidth, kGraphHeight,
 		useHandle, true, m_isDirLeft);
 
-	// あたりはんていをつける
-	DrawBox(m_pos.x - kPlayerHitWidth * 0.5f, m_pos.y - kPlayerHitHeight * 0.5f,
+	// あたりはんていの枠をつける
+	DrawBox(m_pos.x - kPlayerHitWidth * 0.4f, m_pos.y - kPlayerHitHeight * 0.5f,
 		m_pos.x + kPlayerHitWidth * 0.5f, m_pos.y + kPlayerHitHeight * 0.5f,
 		0x0000ff, false);
 }
