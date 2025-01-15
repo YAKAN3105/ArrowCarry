@@ -2,6 +2,7 @@
 #include "DxLib.h"
 #include "game.h"
 #include<cassert>
+#include "MapChip.h"
 
 namespace
 {
@@ -13,7 +14,7 @@ namespace
 	
 
 	// ステージ１
-	constexpr int data[kChipIndexY][kChipIndexX] =
+	constexpr int mapData[kChipIndexY][kChipIndexX] =
 	{
 		{-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
 		{-1,-1,-1,-1,-1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7},
@@ -79,7 +80,7 @@ void Map::Draw()
 	{
 		for (int x = 0; x < kChipIndexX; x++)
 		{
-			
+			MapChip& mapChip = m_mapChips[y][x];
 		}
 	}
 

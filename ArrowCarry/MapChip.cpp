@@ -34,12 +34,12 @@ void MapChip::Update()
 void MapChip::Draw()
 {
 	// 柱ブロックと壁ブロックの情報取得と生成
-	//if (map.data[map.kChipIndexY][map.kChipIndexX] == 67) // 柱ブロック
-	//{
-	//	DrawGraph(kChipWidth, kChipHeight, m_handle1, false);
-	//}
-	//if (map.data[map.kChipIndexY][map.kChipIndexX] == 82) // 壁ブロック
-	//{
-	//	DrawGraph(kChipWidth, kChipHeight, m_handle1, false);
-	//}
+	if (map.data[map.kChipIndexY][map.kChipIndexX] == 67) // 柱ブロック
+	{
+		DrawGraph(kChipWidth, kChipHeight, m_handle1, false);
+	}
+	if (map.data[map.kChipIndexY][map.kChipIndexX] == 82) // 壁ブロック
+	{
+		DrawGraph(kChipWidth, kChipHeight, m_handle1, false);
+	}
 }

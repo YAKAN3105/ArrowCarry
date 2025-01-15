@@ -1,4 +1,6 @@
 #pragma once
+class MapChip;
+
 class Map
 {
 public:
@@ -11,6 +13,7 @@ public:
 
 private:
 	int m_handle1;
+	MapChip* m_mapChips[kChipIndexY][kChipIndexX];
 
 };
 
